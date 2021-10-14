@@ -1,13 +1,18 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity >=0.5.16 <0.9.0;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+// import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 contract vendingMachine {
 
 
   constructor() public {  // constructor initialises once. 
     owner = msg.sender; // the person who deployed constract is the owner
     skuCount = 0; 
+  }
+
+
+  enum State {
+    Available, LowSupply, SoldOut
   }
 //array of addresses of no specified length
   address payable public owner; 
@@ -22,8 +27,53 @@ contract vendingMachine {
     string name;
     uint skuID;
     uint price; 
+    uint inventory; 
+    State state;
+    address payable seller;
+  }
+
+
+  // Events
+event itemAdded(uint _skuCount, string _productName);
+
+  // Modifiers
+modifier enoughItems(uint _inventory) {
+  require(_inventory>=1);
+  _;
+}
+
+
+  // Functions
+
+  function addItem(string memory _name, uint _price, uint _inventory) 
+  public enoughItems(_inventory) returns (bool) {
+    // This function is where sellers can add items to the vending machine
+    // This would increment the SKU count by 1
+    // Emits an event
+    // returns true
+    items[skuCount] = Item({
+      name: _name,
+      skuID: skuCount,
+      price: _price,
+      inventory: _inventory,
+      state: State.Available,
+      seller: msg.sender
+    });
+
+    skuCount = skuCount + 1;
+    emit itemAdded(skuCount, _name);
+    return true;  
 
   }
+
+
+
+
+
+
+
+
+
 
 
 

@@ -3,9 +3,9 @@
 ## Abstract - Project Explaination KISS
 This project is submitted as part of the Blockchain Developer Bootcamp. The core objective is to demonstrate my understanding of the Ethereum Blockchain and interacting with the EVM through the use of smart contracts. 
 
-The idea is a simplified burger shop. For the restaurant owners, to add a new burger to the menu they must go through a multi-signature process. In addition burger shop is part of a franchise and as a resut, every burger sale, leads to a portion of the burger price that is sent to a contract account that is held in escrow for a year to be paid out to the original owner. 
+The idea is a simplified vending machine. For the vending machine, to add a new item to sell, we require a multi-signature wallet of the actual owner and the company property to load in the item. In addition, the vending machine is part of a franchise and as a resut, every sale, leads to a portion of the purchase price that is sent to a contract account that is held in escrow for a year to be paid out to the original owner. 
 
-In addition, users will be able to buy their favourite burgers when visiting this shop
+In addition, users will be able to buy their selected items. 
 
 ## Tech Stack | Libraries | Frameworks
 ### Smart Contracts

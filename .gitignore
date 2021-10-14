@@ -1,0 +1,4 @@
+*.env
+*.log
+*truffle-config.js
+/test

@@ -12,7 +12,7 @@ contract voting {
   
   struct Voter {
     address voterAddress; // address of voter
-    uint votes; // the index of the thing voted for
+    uint vote; // the index of the thing voted for
     string message; // message of the voter
     uint timestamp; // timetamp of the vote
   }
@@ -51,11 +51,19 @@ modifier enoughItems(uint _inventory) {
 
   // 1. Create the voting function
   function vote(string memory _message, uint proposal) public {
-
+    totalVotes +=1; // increment total vote counts
+    console.log("%s has voted!", msg.sender); // create a console log indicating a vote event
+    Voter storage sender = voters[msg.sender]; // 
+    sender.message = _message; 
+    sender.vote = proposal; 
+    
+    proposals[proposal].voteCount +=1; 
+  
 
 
   }
   
+
 
 
 

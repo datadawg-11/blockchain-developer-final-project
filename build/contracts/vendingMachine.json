@@ -86,23 +86,44 @@
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getItems",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_skuCount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"_productName\",\"type\":\"string\"}],\"name\":\"itemAdded\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"_price\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_inventory\",\"type\":\"uint256\"}],\"name\":\"addItem\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"skuCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/vendingMachine.sol\":\"vendingMachine\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/vendingMachine.sol\":{\"keccak256\":\"0xc29d6aad6948006637b5310f375774418e02d1623f5ec57e08b2166802999b7e\",\"urls\":[\"bzz-raw://c34c28855bbee1f32694a20ef5616ac7b5f19076cd7b9f230ceb65a48cead405\",\"dweb:/ipfs/QmUSHzQHXkxxSQ73jWQFrXbzAvRFrwhGnfsRt9byRfx1gj\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600060018190555061047c806100686000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806322702473146100465780638da5cb5b14610064578063d5e6c333146100ae575b600080fd5b61004e610195565b6040518082815260200191505060405180910390f35b61006c61019b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61017b600480360360608110156100c457600080fd5b81019080803590602001906401000000008111156100e157600080fd5b8201836020820111156100f357600080fd5b8035906020019184600183028401116401000000008311171561011557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929080359060200190929190803590602001909291905050506101c0565b604051808215151515815260200191505060405180910390f35b60015481565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008160018110156101d157600080fd5b6040518060c0016040528086815260200160015481526020018581526020018481526020016000600281111561020357fe5b81526020013373ffffffffffffffffffffffffffffffffffffffff1681525060026000600154815260200190815260200160002060008201518160000190805190602001906102539291906103a2565b5060208201518160010155604082015181600201556060820151816003015560808201518160040160006101000a81548160ff0219169083600281111561029657fe5b021790555060a08201518160040160016101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555090505060018054016001819055507f59275326eb289eacc2b4b8d401592bca6a8abc95856e96d2733867a4bd1ac6f1600154866040518083815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561035b578082015181840152602081019050610340565b50505050905090810190601f1680156103885780820380516001836020036101000a031916815260200191505b50935050505060405180910390a160019150509392505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103e357805160ff1916838001178555610411565b82800160010185558215610411579182015b828111156104105782518255916020019190600101906103f5565b5b50905061041e9190610422565b5090565b61044491905b80821115610440576000816000905550600101610428565b5090565b9056fea265627a7a72315820226ef7cf41bee76b650b2b893adce3be0561a35a3eecfb456454b5e2183ae72864736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806322702473146100465780638da5cb5b14610064578063d5e6c333146100ae575b600080fd5b61004e610195565b6040518082815260200191505060405180910390f35b61006c61019b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61017b600480360360608110156100c457600080fd5b81019080803590602001906401000000008111156100e157600080fd5b8201836020820111156100f357600080fd5b8035906020019184600183028401116401000000008311171561011557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929080359060200190929190803590602001909291905050506101c0565b604051808215151515815260200191505060405180910390f35b60015481565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008160018110156101d157600080fd5b6040518060c0016040528086815260200160015481526020018581526020018481526020016000600281111561020357fe5b81526020013373ffffffffffffffffffffffffffffffffffffffff1681525060026000600154815260200190815260200160002060008201518160000190805190602001906102539291906103a2565b5060208201518160010155604082015181600201556060820151816003015560808201518160040160006101000a81548160ff0219169083600281111561029657fe5b021790555060a08201518160040160016101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555090505060018054016001819055507f59275326eb289eacc2b4b8d401592bca6a8abc95856e96d2733867a4bd1ac6f1600154866040518083815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561035b578082015181840152602081019050610340565b50505050905090810190601f1680156103885780820380516001836020036101000a031916815260200191505b50935050505060405180910390a160019150509392505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103e357805160ff1916838001178555610411565b82800160010185558215610411579182015b828111156104105782518255916020019190600101906103f5565b5b50905061041e9190610422565b5090565b61044491905b80821115610440576000816000905550600101610428565b5090565b9056fea265627a7a72315820226ef7cf41bee76b650b2b893adce3be0561a35a3eecfb456454b5e2183ae72864736f6c63430005100032",
-  "sourceMap": "127:1406:0:-;;;157:154;8:9:-1;5:2;;;30:1;27;20:12;5:2;157:154:0;227:10;219:5;;:18;;;;;;;;;;;;;;;;;;304:1;293:8;:12;;;;127:1406;;;;;;",
-  "deployedSourceMap": "127:1406:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;127:1406:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;515:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;413:28;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;958:557;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;958:557:0;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;958:557:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;958:557:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;958:557:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;958:557:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;515:20;;;;:::o;413:28::-;;;;;;;;;;;;;:::o;958:557::-;1069:4;1048:10;927:1;915:10;:13;;907:22;;;;;;1263:160;;;;;;;;1282:5;1263:160;;;;1302:8;;1263:160;;;;1325:6;1263:160;;;;1350:10;1263:160;;;;1375:15;1263:160;;;;;;;;;;;;1406:10;1263:160;;;;;1245:5;:15;1251:8;;1245:15;;;;;;;;;;;:178;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1452:1;1441:8;;:12;1430:8;:23;;;;1464:26;1474:8;;1484:5;1464:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1464:26:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1503:4;1496:11;;958:557;;;;;;:::o;127:1406::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.5.16 <0.9.0;\n\n// import \"@openzeppelin/contracts/token/ERC721/ERC721.sol\";\ncontract vendingMachine {\n\n\n  constructor() public {  // constructor initialises once. \n    owner = msg.sender; // the person who deployed constract is the owner\n    skuCount = 0; \n  }\n\n\n  enum State {\n    Available, LowSupply, SoldOut\n  }\n//array of addresses of no specified length\n  address payable public owner; \n\n// variable that stores number of items for sale in vending machine\n  uint public skuCount; \n\n// mapping of items for sale. So each skuID corresponds to a dictionary\n  mapping (uint => Item) items; \n\n  struct Item {\n    string name;\n    uint skuID;\n    uint price; \n    uint inventory; \n    State state;\n    address payable seller;\n  }\n\n\n  // Events\nevent itemAdded(uint _skuCount, string _productName);\n\n  // Modifiers\nmodifier enoughItems(uint _inventory) {\n  require(_inventory>=1);\n  _;\n}\n\n\n  // Functions\n\n  function addItem(string memory _name, uint _price, uint _inventory) \n  public enoughItems(_inventory) returns (bool) {\n    // This function is where sellers can add items to the vending machine\n    // This would increment the SKU count by 1\n    // Emits an event\n    // returns true\n    items[skuCount] = Item({\n      name: _name,\n      skuID: skuCount,\n      price: _price,\n      inventory: _inventory,\n      state: State.Available,\n      seller: msg.sender\n    });\n\n    skuCount = skuCount + 1;\n    emit itemAdded(skuCount, _name);\n    return true;  \n\n  }\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n}\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_skuCount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"_productName\",\"type\":\"string\"}],\"name\":\"itemAdded\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"_price\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_inventory\",\"type\":\"uint256\"}],\"name\":\"addItem\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"getItems\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"skuCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/vendingMachine.sol\":\"vendingMachine\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/vendingMachine.sol\":{\"keccak256\":\"0xe8111417ddb64d837269632b76e15e03cb562c3cd738f083cfd4e720a4d1b33a\",\"urls\":[\"bzz-raw://1babe3476a2a7d18732ddfa537824f759d704a5142e94d12f3522b5df18c1718\",\"dweb:/ipfs/QmVhX2Ldu8qmjAgqmS7ZwQyj7sb8u8uoJDREj3hbMg5UDA\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060006001819055506104eb806100686000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80632270247314610051578063796c5e941461006f5780638da5cb5b146100b1578063d5e6c333146100fb575b600080fd5b6100596101e2565b6040518082815260200191505060405180910390f35b61009b6004803603602081101561008557600080fd5b81019080803590602001909291905050506101e8565b6040518082815260200191505060405180910390f35b6100b9610208565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101c86004803603606081101561011157600080fd5b810190808035906020019064010000000081111561012e57600080fd5b82018360208201111561014057600080fd5b8035906020019184600183028401116401000000008311171561016257600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290803590602001909291908035906020019092919050505061022d565b604051808215151515815260200191505060405180910390f35b60015481565b600060026000838152602001908152602001600020600201549050919050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600081600181101561023e57600080fd5b6040518060c00160405280868152602001600180540181526020018581526020018481526020016000600281111561027257fe5b81526020013373ffffffffffffffffffffffffffffffffffffffff1681525060026000600154815260200190815260200160002060008201518160000190805190602001906102c2929190610411565b5060208201518160010155604082015181600201556060820151816003015560808201518160040160006101000a81548160ff0219169083600281111561030557fe5b021790555060a08201518160040160016101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555090505060018054016001819055507f59275326eb289eacc2b4b8d401592bca6a8abc95856e96d2733867a4bd1ac6f1600154866040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156103ca5780820151818401526020810190506103af565b50505050905090810190601f1680156103f75780820380516001836020036101000a031916815260200191505b50935050505060405180910390a160019150509392505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061045257805160ff1916838001178555610480565b82800160010185558215610480579182015b8281111561047f578251825591602001919060010190610464565b5b50905061048d9190610491565b5090565b6104b391905b808211156104af576000816000905550600101610497565b5090565b9056fea265627a7a72315820c51e94215e628218dd969c59f518f085c7bec9879ecd8198c8cd6e7438460ea364736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80632270247314610051578063796c5e941461006f5780638da5cb5b146100b1578063d5e6c333146100fb575b600080fd5b6100596101e2565b6040518082815260200191505060405180910390f35b61009b6004803603602081101561008557600080fd5b81019080803590602001909291905050506101e8565b6040518082815260200191505060405180910390f35b6100b9610208565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101c86004803603606081101561011157600080fd5b810190808035906020019064010000000081111561012e57600080fd5b82018360208201111561014057600080fd5b8035906020019184600183028401116401000000008311171561016257600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290803590602001909291908035906020019092919050505061022d565b604051808215151515815260200191505060405180910390f35b60015481565b600060026000838152602001908152602001600020600201549050919050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600081600181101561023e57600080fd5b6040518060c00160405280868152602001600180540181526020018581526020018481526020016000600281111561027257fe5b81526020013373ffffffffffffffffffffffffffffffffffffffff1681525060026000600154815260200190815260200160002060008201518160000190805190602001906102c2929190610411565b5060208201518160010155604082015181600201556060820151816003015560808201518160040160006101000a81548160ff0219169083600281111561030557fe5b021790555060a08201518160040160016101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555090505060018054016001819055507f59275326eb289eacc2b4b8d401592bca6a8abc95856e96d2733867a4bd1ac6f1600154866040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156103ca5780820151818401526020810190506103af565b50505050905090810190601f1680156103f75780820380516001836020036101000a031916815260200191505b50935050505060405180910390a160019150509392505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061045257805160ff1916838001178555610480565b82800160010185558215610480579182015b8281111561047f578251825591602001919060010190610464565b5b50905061048d9190610491565b5090565b6104b391905b808211156104af576000816000905550600101610497565b5090565b9056fea265627a7a72315820c51e94215e628218dd969c59f518f085c7bec9879ecd8198c8cd6e7438460ea364736f6c63430005100032",
+  "sourceMap": "127:1621:0:-;;;784:154;8:9:-1;5:2;;;30:1;27;20:12;5:2;784:154:0;854:10;846:5;;:18;;;;;;;;;;;;;;;;;;931:1;920:8;:12;;;;127:1621;;;;;;",
+  "deployedSourceMap": "127:1621:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;127:1621:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;359:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1521:95;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1521:95:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;257:28;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;958:559;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;958:559:0;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;958:559:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;958:559:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;958:559:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;958:559:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;359:20;;;;:::o;1521:95::-;1572:4;1592:5;:12;1598:5;1592:12;;;;;;;;;;;:18;;;1584:27;;1521:95;;;:::o;257:28::-;;;;;;;;;;;;;:::o;958:559::-;1069:4;1048:10;771:1;759:10;:13;;751:22;;;;;;1263:162;;;;;;;;1282:5;1263:162;;;;1311:1;1302:8;;:10;1263:162;;;;1327:6;1263:162;;;;1352:10;1263:162;;;;1377:15;1263:162;;;;;;;;;;;;1408:10;1263:162;;;;;1245:5;:15;1251:8;;1245:15;;;;;;;;;;;:180;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1454:1;1443:8;;:12;1432:8;:23;;;;1466:26;1476:8;;1486:5;1466:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1466:26:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1505:4;1498:11;;958:559;;;;;;:::o;127:1621::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.5.16 <0.9.0;\n\n// import \"@openzeppelin/contracts/token/ERC721/ERC721.sol\";\ncontract vendingMachine {\n\n\n\n\n\n  enum State {\n    Available, LowSupply, SoldOut\n  }\n//array of addresses of no specified length\n  address payable public owner; \n\n// variable that stores number of items for sale in vending machine\n  uint public skuCount; \n\n// mapping of items for sale. So each skuID corresponds to a dictionary\n  mapping (uint => Item) items; \n\n  struct Item {\n    string name;\n    uint skuID;\n    uint price; \n    uint inventory; \n    State state;\n    address payable seller;\n  }\n\n\n  // Events\nevent itemAdded(uint _skuCount, string _productName);\n\n  // Modifiers\nmodifier enoughItems(uint _inventory) {\n  require(_inventory>=1);\n  _;\n}\n  constructor() public {  // constructor initialises once. \n    owner = msg.sender; // the person who deployed constract is the owner\n    skuCount = 0; \n  }\n\n  // Functions\n\n  function addItem(string memory _name, uint _price, uint _inventory) \n  public enoughItems(_inventory) returns (bool) {\n    // This function is where sellers can add items to the vending machine\n    // This would increment the SKU count by 1\n    // Emits an event\n    // returns true\n    items[skuCount] = Item({\n      name: _name,\n      skuID: skuCount+1,\n      price: _price,\n      inventory: _inventory,\n      state: State.Available,\n      seller: msg.sender\n    });\n\n    skuCount = skuCount + 1;\n    emit itemAdded(skuCount, _name);\n    return true;  \n\n  }\n\n  function getItems(uint index) public view returns (uint) {\n    return (items[index].price);\n  }\n\n\n  // function removeItem(uint _skuId) external returns (uint[]) {\n  //   require(_skuId < array.length);\n  // }\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n}\n",
   "sourcePath": "/mnt/c/Users/Mason-PC/Documents/GitHub/blockchain-developer-final-project/contracts/vendingMachine.sol",
   "ast": {
     "absolutePath": "project:/contracts/vendingMachine.sol",
     "exportedSymbols": {
       "vendingMachine": [
-        101
+        117
       ]
     },
-    "id": 102,
+    "id": 118,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -125,193 +146,47 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 101,
+        "id": 117,
         "linearizedBaseContracts": [
-          101
+          117
         ],
         "name": "vendingMachine",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "body": {
-              "id": 13,
-              "nodeType": "Block",
-              "src": "178:133:0",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 7,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 4,
-                      "name": "owner",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 20,
-                      "src": "219:5:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address_payable",
-                        "typeString": "address payable"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "expression": {
-                        "argumentTypes": null,
-                        "id": 5,
-                        "name": "msg",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 116,
-                        "src": "227:3:0",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_magic_message",
-                          "typeString": "msg"
-                        }
-                      },
-                      "id": 6,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "sender",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": null,
-                      "src": "227:10:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address_payable",
-                        "typeString": "address payable"
-                      }
-                    },
-                    "src": "219:18:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address_payable",
-                      "typeString": "address payable"
-                    }
-                  },
-                  "id": 8,
-                  "nodeType": "ExpressionStatement",
-                  "src": "219:18:0"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 11,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 9,
-                      "name": "skuCount",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 22,
-                      "src": "293:8:0",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "hexValue": "30",
-                      "id": 10,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "kind": "number",
-                      "lValueRequested": false,
-                      "nodeType": "Literal",
-                      "src": "304:1:0",
-                      "subdenomination": null,
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_rational_0_by_1",
-                        "typeString": "int_const 0"
-                      },
-                      "value": "0"
-                    },
-                    "src": "293:12:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 12,
-                  "nodeType": "ExpressionStatement",
-                  "src": "293:12:0"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 14,
-            "implemented": true,
-            "kind": "constructor",
-            "modifiers": [],
-            "name": "",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 2,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "168:2:0"
-            },
-            "returnParameters": {
-              "id": 3,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "178:0:0"
-            },
-            "scope": 101,
-            "src": "157:154:0",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "public"
-          },
-          {
             "canonicalName": "vendingMachine.State",
-            "id": 18,
+            "id": 5,
             "members": [
               {
-                "id": 15,
+                "id": 2,
                 "name": "Available",
                 "nodeType": "EnumValue",
-                "src": "333:9:0"
+                "src": "177:9:0"
               },
               {
-                "id": 16,
+                "id": 3,
                 "name": "LowSupply",
                 "nodeType": "EnumValue",
-                "src": "344:9:0"
+                "src": "188:9:0"
               },
               {
-                "id": 17,
+                "id": 4,
                 "name": "SoldOut",
                 "nodeType": "EnumValue",
-                "src": "355:7:0"
+                "src": "199:7:0"
               }
             ],
             "name": "State",
             "nodeType": "EnumDefinition",
-            "src": "316:50:0"
+            "src": "160:50:0"
           },
           {
             "constant": false,
-            "id": 20,
+            "id": 7,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 101,
-            "src": "413:28:0",
+            "scope": 117,
+            "src": "257:28:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -319,10 +194,10 @@
               "typeString": "address payable"
             },
             "typeName": {
-              "id": 19,
+              "id": 6,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "413:15:0",
+              "src": "257:15:0",
               "stateMutability": "payable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address_payable",
@@ -334,11 +209,11 @@
           },
           {
             "constant": false,
-            "id": 22,
+            "id": 9,
             "name": "skuCount",
             "nodeType": "VariableDeclaration",
-            "scope": 101,
-            "src": "515:20:0",
+            "scope": 117,
+            "src": "359:20:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -346,10 +221,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 21,
+              "id": 8,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "515:4:0",
+              "src": "359:4:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -360,44 +235,44 @@
           },
           {
             "constant": false,
-            "id": 26,
+            "id": 13,
             "name": "items",
             "nodeType": "VariableDeclaration",
-            "scope": 101,
-            "src": "613:28:0",
+            "scope": 117,
+            "src": "457:28:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Item_$39_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Item_$26_storage_$",
               "typeString": "mapping(uint256 => struct vendingMachine.Item)"
             },
             "typeName": {
-              "id": 25,
+              "id": 12,
               "keyType": {
-                "id": 23,
+                "id": 10,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
-                "src": "622:4:0",
+                "src": "466:4:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
               "nodeType": "Mapping",
-              "src": "613:22:0",
+              "src": "457:22:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Item_$39_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Item_$26_storage_$",
                 "typeString": "mapping(uint256 => struct vendingMachine.Item)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 24,
+                "id": 11,
                 "name": "Item",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 39,
-                "src": "630:4:0",
+                "referencedDeclaration": 26,
+                "src": "474:4:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Item_$39_storage_ptr",
+                  "typeIdentifier": "t_struct$_Item_$26_storage_ptr",
                   "typeString": "struct vendingMachine.Item"
                 }
               }
@@ -407,15 +282,15 @@
           },
           {
             "canonicalName": "vendingMachine.Item",
-            "id": 39,
+            "id": 26,
             "members": [
               {
                 "constant": false,
-                "id": 28,
+                "id": 15,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
-                "scope": 39,
-                "src": "665:11:0",
+                "scope": 26,
+                "src": "509:11:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -423,10 +298,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 27,
+                  "id": 14,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "665:6:0",
+                  "src": "509:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -437,11 +312,11 @@
               },
               {
                 "constant": false,
-                "id": 30,
+                "id": 17,
                 "name": "skuID",
                 "nodeType": "VariableDeclaration",
-                "scope": 39,
-                "src": "682:10:0",
+                "scope": 26,
+                "src": "526:10:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -449,10 +324,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 29,
+                  "id": 16,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "682:4:0",
+                  "src": "526:4:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -463,11 +338,11 @@
               },
               {
                 "constant": false,
-                "id": 32,
+                "id": 19,
                 "name": "price",
                 "nodeType": "VariableDeclaration",
-                "scope": 39,
-                "src": "698:10:0",
+                "scope": 26,
+                "src": "542:10:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -475,10 +350,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 31,
+                  "id": 18,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "698:4:0",
+                  "src": "542:4:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -489,11 +364,11 @@
               },
               {
                 "constant": false,
-                "id": 34,
+                "id": 21,
                 "name": "inventory",
                 "nodeType": "VariableDeclaration",
-                "scope": 39,
-                "src": "715:14:0",
+                "scope": 26,
+                "src": "559:14:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -501,10 +376,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 33,
+                  "id": 20,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "715:4:0",
+                  "src": "559:4:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -515,26 +390,26 @@
               },
               {
                 "constant": false,
-                "id": 36,
+                "id": 23,
                 "name": "state",
                 "nodeType": "VariableDeclaration",
-                "scope": 39,
-                "src": "736:11:0",
+                "scope": 26,
+                "src": "580:11:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_State_$18",
+                  "typeIdentifier": "t_enum$_State_$5",
                   "typeString": "enum vendingMachine.State"
                 },
                 "typeName": {
                   "contractScope": null,
-                  "id": 35,
+                  "id": 22,
                   "name": "State",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 18,
-                  "src": "736:5:0",
+                  "referencedDeclaration": 5,
+                  "src": "580:5:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_State_$18",
+                    "typeIdentifier": "t_enum$_State_$5",
                     "typeString": "enum vendingMachine.State"
                   }
                 },
@@ -543,11 +418,11 @@
               },
               {
                 "constant": false,
-                "id": 38,
+                "id": 25,
                 "name": "seller",
                 "nodeType": "VariableDeclaration",
-                "scope": 39,
-                "src": "753:22:0",
+                "scope": 26,
+                "src": "597:22:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -555,10 +430,10 @@
                   "typeString": "address payable"
                 },
                 "typeName": {
-                  "id": 37,
+                  "id": 24,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "753:15:0",
+                  "src": "597:15:0",
                   "stateMutability": "payable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address_payable",
@@ -571,28 +446,28 @@
             ],
             "name": "Item",
             "nodeType": "StructDefinition",
-            "scope": 101,
-            "src": "647:133:0",
+            "scope": 117,
+            "src": "491:133:0",
             "visibility": "public"
           },
           {
             "anonymous": false,
             "documentation": null,
-            "id": 45,
+            "id": 32,
             "name": "itemAdded",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 44,
+              "id": 31,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 41,
+                  "id": 28,
                   "indexed": false,
                   "name": "_skuCount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45,
-                  "src": "811:14:0",
+                  "scope": 32,
+                  "src": "655:14:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -600,10 +475,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 40,
+                    "id": 27,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "811:4:0",
+                    "src": "655:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -614,12 +489,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 43,
+                  "id": 30,
                   "indexed": false,
                   "name": "_productName",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45,
-                  "src": "827:19:0",
+                  "scope": 32,
+                  "src": "671:19:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -627,10 +502,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 42,
+                    "id": 29,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "827:6:0",
+                    "src": "671:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -640,15 +515,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "810:37:0"
+              "src": "654:37:0"
             },
-            "src": "795:53:0"
+            "src": "639:53:0"
           },
           {
             "body": {
-              "id": 56,
+              "id": 43,
               "nodeType": "Block",
-              "src": "903:34:0",
+              "src": "747:34:0",
               "statements": [
                 {
                   "expression": {
@@ -660,19 +535,19 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 52,
+                        "id": 39,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
                           "argumentTypes": null,
-                          "id": 50,
+                          "id": 37,
                           "name": "_inventory",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 47,
-                          "src": "915:10:0",
+                          "referencedDeclaration": 34,
+                          "src": "759:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -683,14 +558,14 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "31",
-                          "id": 51,
+                          "id": 38,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "number",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "927:1:0",
+                          "src": "771:1:0",
                           "subdenomination": null,
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_1_by_1",
@@ -698,7 +573,7 @@
                           },
                           "value": "1"
                         },
-                        "src": "915:13:0",
+                        "src": "759:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -712,21 +587,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 49,
+                      "id": 36,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        119,
-                        120
+                        135,
+                        136
                       ],
-                      "referencedDeclaration": 119,
-                      "src": "907:7:0",
+                      "referencedDeclaration": 135,
+                      "src": "751:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 53,
+                    "id": 40,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -734,38 +609,38 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "907:22:0",
+                    "src": "751:22:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 54,
+                  "id": 41,
                   "nodeType": "ExpressionStatement",
-                  "src": "907:22:0"
+                  "src": "751:22:0"
                 },
                 {
-                  "id": 55,
+                  "id": 42,
                   "nodeType": "PlaceholderStatement",
-                  "src": "933:1:0"
+                  "src": "777:1:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 57,
+            "id": 44,
             "name": "enoughItems",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 48,
+              "id": 35,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 47,
+                  "id": 34,
                   "name": "_inventory",
                   "nodeType": "VariableDeclaration",
-                  "scope": 57,
-                  "src": "886:15:0",
+                  "scope": 44,
+                  "src": "730:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -773,10 +648,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 46,
+                    "id": 33,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "886:4:0",
+                    "src": "730:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -786,21 +661,167 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "885:17:0"
+              "src": "729:17:0"
             },
-            "src": "865:72:0",
+            "src": "709:72:0",
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 99,
+              "id": 56,
               "nodeType": "Block",
-              "src": "1075:440:0",
+              "src": "805:133:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 84,
+                    "id": 50,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 47,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7,
+                      "src": "846:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 48,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 132,
+                        "src": "854:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 49,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "854:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "846:18:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "id": 51,
+                  "nodeType": "ExpressionStatement",
+                  "src": "846:18:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 54,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 52,
+                      "name": "skuCount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9,
+                      "src": "920:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 53,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "931:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "920:12:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 55,
+                  "nodeType": "ExpressionStatement",
+                  "src": "920:12:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 57,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 45,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "795:2:0"
+            },
+            "returnParameters": {
+              "id": 46,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "805:0:0"
+            },
+            "scope": 117,
+            "src": "784:154:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 101,
+              "nodeType": "Block",
+              "src": "1075:442:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 86,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -813,10 +834,10 @@
                         "name": "items",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 26,
+                        "referencedDeclaration": 13,
                         "src": "1245:5:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Item_$39_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Item_$26_storage_$",
                           "typeString": "mapping(uint256 => struct vendingMachine.Item storage ref)"
                         }
                       },
@@ -827,7 +848,7 @@
                         "name": "skuCount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 22,
+                        "referencedDeclaration": 9,
                         "src": "1251:8:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -841,7 +862,7 @@
                       "nodeType": "IndexAccess",
                       "src": "1245:15:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Item_$39_storage",
+                        "typeIdentifier": "t_struct$_Item_$26_storage",
                         "typeString": "struct vendingMachine.Item storage ref"
                       }
                     },
@@ -865,12 +886,49 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 76,
-                          "name": "skuCount",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 22,
-                          "src": "1302:8:0",
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 78,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 76,
+                            "name": "skuCount",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 9,
+                            "src": "1302:8:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "+",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "hexValue": "31",
+                            "id": 77,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "1311:1:0",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_1_by_1",
+                              "typeString": "int_const 1"
+                            },
+                            "value": "1"
+                          },
+                          "src": "1302:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -878,12 +936,12 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 77,
+                          "id": 79,
                           "name": "_price",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 61,
-                          "src": "1325:6:0",
+                          "src": "1327:6:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -891,44 +949,15 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 78,
+                          "id": 80,
                           "name": "_inventory",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 63,
-                          "src": "1350:10:0",
+                          "src": "1352:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
-                          }
-                        },
-                        {
-                          "argumentTypes": null,
-                          "expression": {
-                            "argumentTypes": null,
-                            "id": 79,
-                            "name": "State",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 18,
-                            "src": "1375:5:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_enum$_State_$18_$",
-                              "typeString": "type(enum vendingMachine.State)"
-                            }
-                          },
-                          "id": 80,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": true,
-                          "lValueRequested": false,
-                          "memberName": "Available",
-                          "nodeType": "MemberAccess",
-                          "referencedDeclaration": null,
-                          "src": "1375:15:0",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_enum$_State_$18",
-                            "typeString": "enum vendingMachine.State"
                           }
                         },
                         {
@@ -936,17 +965,46 @@
                           "expression": {
                             "argumentTypes": null,
                             "id": 81,
+                            "name": "State",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 5,
+                            "src": "1377:5:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_enum$_State_$5_$",
+                              "typeString": "type(enum vendingMachine.State)"
+                            }
+                          },
+                          "id": 82,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberName": "Available",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1377:15:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_State_$5",
+                            "typeString": "enum vendingMachine.State"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 83,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 116,
-                            "src": "1406:3:0",
+                            "referencedDeclaration": 132,
+                            "src": "1408:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 82,
+                          "id": 84,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -954,7 +1012,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "1406:10:0",
+                          "src": "1408:10:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
@@ -980,7 +1038,7 @@
                             "typeString": "uint256"
                           },
                           {
-                            "typeIdentifier": "t_enum$_State_$18",
+                            "typeIdentifier": "t_enum$_State_$5",
                             "typeString": "enum vendingMachine.State"
                           },
                           {
@@ -992,14 +1050,14 @@
                         "name": "Item",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 39,
+                        "referencedDeclaration": 26,
                         "src": "1263:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Item_$39_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_Item_$26_storage_ptr_$",
                           "typeString": "type(struct vendingMachine.Item storage pointer)"
                         }
                       },
-                      "id": 83,
+                      "id": 85,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1014,38 +1072,38 @@
                         "seller"
                       ],
                       "nodeType": "FunctionCall",
-                      "src": "1263:160:0",
+                      "src": "1263:162:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Item_$39_memory",
+                        "typeIdentifier": "t_struct$_Item_$26_memory",
                         "typeString": "struct vendingMachine.Item memory"
                       }
                     },
-                    "src": "1245:178:0",
+                    "src": "1245:180:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Item_$39_storage",
+                      "typeIdentifier": "t_struct$_Item_$26_storage",
                       "typeString": "struct vendingMachine.Item storage ref"
                     }
                   },
-                  "id": 85,
+                  "id": 87,
                   "nodeType": "ExpressionStatement",
-                  "src": "1245:178:0"
+                  "src": "1245:180:0"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 90,
+                    "id": 92,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 86,
+                      "id": 88,
                       "name": "skuCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 22,
-                      "src": "1430:8:0",
+                      "referencedDeclaration": 9,
+                      "src": "1432:8:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1059,19 +1117,19 @@
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 89,
+                      "id": 91,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
                         "argumentTypes": null,
-                        "id": 87,
+                        "id": 89,
                         "name": "skuCount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 22,
-                        "src": "1441:8:0",
+                        "referencedDeclaration": 9,
+                        "src": "1443:8:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1082,14 +1140,14 @@
                       "rightExpression": {
                         "argumentTypes": null,
                         "hexValue": "31",
-                        "id": 88,
+                        "id": 90,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "number",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "1452:1:0",
+                        "src": "1454:1:0",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_rational_1_by_1",
@@ -1097,21 +1155,21 @@
                         },
                         "value": "1"
                       },
-                      "src": "1441:12:0",
+                      "src": "1443:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "1430:23:0",
+                    "src": "1432:23:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 91,
+                  "id": 93,
                   "nodeType": "ExpressionStatement",
-                  "src": "1430:23:0"
+                  "src": "1432:23:0"
                 },
                 {
                   "eventCall": {
@@ -1119,12 +1177,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 93,
+                        "id": 95,
                         "name": "skuCount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 22,
-                        "src": "1474:8:0",
+                        "referencedDeclaration": 9,
+                        "src": "1476:8:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1132,12 +1190,12 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 94,
+                        "id": 96,
                         "name": "_name",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 59,
-                        "src": "1484:5:0",
+                        "src": "1486:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
                           "typeString": "string memory"
@@ -1155,18 +1213,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 92,
+                      "id": 94,
                       "name": "itemAdded",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 45,
-                      "src": "1464:9:0",
+                      "referencedDeclaration": 32,
+                      "src": "1466:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (uint256,string memory)"
                       }
                     },
-                    "id": 95,
+                    "id": 97,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1174,28 +1232,28 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1464:26:0",
+                    "src": "1466:26:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 96,
+                  "id": 98,
                   "nodeType": "EmitStatement",
-                  "src": "1459:31:0"
+                  "src": "1461:31:0"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 97,
+                    "id": 99,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
                     "kind": "bool",
                     "lValueRequested": false,
                     "nodeType": "Literal",
-                    "src": "1503:4:0",
+                    "src": "1505:4:0",
                     "subdenomination": null,
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
@@ -1204,14 +1262,14 @@
                     "value": "true"
                   },
                   "functionReturnParameters": 70,
-                  "id": 98,
+                  "id": 100,
                   "nodeType": "Return",
-                  "src": "1496:11:0"
+                  "src": "1498:11:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 100,
+            "id": 102,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -1238,7 +1296,7 @@
                   "name": "enoughItems",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 57,
+                  "referencedDeclaration": 44,
                   "src": "1036:11:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_uint256_$",
@@ -1260,7 +1318,7 @@
                   "id": 59,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 100,
+                  "scope": 102,
                   "src": "975:19:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1286,7 +1344,7 @@
                   "id": 61,
                   "name": "_price",
                   "nodeType": "VariableDeclaration",
-                  "scope": 100,
+                  "scope": 102,
                   "src": "996:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1312,7 +1370,7 @@
                   "id": 63,
                   "name": "_inventory",
                   "nodeType": "VariableDeclaration",
-                  "scope": 100,
+                  "scope": 102,
                   "src": "1009:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1345,7 +1403,7 @@
                   "id": 69,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 100,
+                  "scope": 102,
                   "src": "1069:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1369,25 +1427,191 @@
               ],
               "src": "1068:6:0"
             },
-            "scope": 101,
-            "src": "958:557:0",
+            "scope": 117,
+            "src": "958:559:0",
             "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 115,
+              "nodeType": "Block",
+              "src": "1578:38:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 109,
+                            "name": "items",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 13,
+                            "src": "1592:5:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Item_$26_storage_$",
+                              "typeString": "mapping(uint256 => struct vendingMachine.Item storage ref)"
+                            }
+                          },
+                          "id": 111,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 110,
+                            "name": "index",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 104,
+                            "src": "1598:5:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1592:12:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Item_$26_storage",
+                            "typeString": "struct vendingMachine.Item storage ref"
+                          }
+                        },
+                        "id": 112,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "price",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 19,
+                        "src": "1592:18:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 113,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1591:20:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 108,
+                  "id": 114,
+                  "nodeType": "Return",
+                  "src": "1584:27:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 116,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getItems",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 105,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 104,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 116,
+                  "src": "1539:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 103,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1539:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1538:12:0"
+            },
+            "returnParameters": {
+              "id": 108,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 107,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 116,
+                  "src": "1572:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 106,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1572:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1571:6:0"
+            },
+            "scope": 117,
+            "src": "1521:95:0",
+            "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 102,
-        "src": "127:1406:0"
+        "scope": 118,
+        "src": "127:1621:0"
       }
     ],
-    "src": "32:1502:0"
+    "src": "32:1717:0"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/contracts/vendingMachine.sol",
       "exportedSymbols": {
         "vendingMachine": [
-          101
+          117
         ]
       }
     },
@@ -1420,184 +1644,12 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            101
+            117
           ],
           "name": "vendingMachine",
-          "scope": 102
+          "scope": 118
         },
         "children": [
-          {
-            "attributes": {
-              "documentation": null,
-              "implemented": true,
-              "isConstructor": true,
-              "kind": "constructor",
-              "modifiers": [
-                null
-              ],
-              "name": "",
-              "scope": 101,
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 2,
-                "name": "ParameterList",
-                "src": "168:2:0"
-              },
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 3,
-                "name": "ParameterList",
-                "src": "178:0:0"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "operator": "=",
-                          "type": "address payable"
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 20,
-                              "type": "address payable",
-                              "value": "owner"
-                            },
-                            "id": 4,
-                            "name": "Identifier",
-                            "src": "219:5:0"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": false,
-                              "lValueRequested": false,
-                              "member_name": "sender",
-                              "referencedDeclaration": null,
-                              "type": "address payable"
-                            },
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 116,
-                                  "type": "msg",
-                                  "value": "msg"
-                                },
-                                "id": 5,
-                                "name": "Identifier",
-                                "src": "227:3:0"
-                              }
-                            ],
-                            "id": 6,
-                            "name": "MemberAccess",
-                            "src": "227:10:0"
-                          }
-                        ],
-                        "id": 7,
-                        "name": "Assignment",
-                        "src": "219:18:0"
-                      }
-                    ],
-                    "id": 8,
-                    "name": "ExpressionStatement",
-                    "src": "219:18:0"
-                  },
-                  {
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "operator": "=",
-                          "type": "uint256"
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 22,
-                              "type": "uint256",
-                              "value": "skuCount"
-                            },
-                            "id": 9,
-                            "name": "Identifier",
-                            "src": "293:8:0"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "hexvalue": "30",
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": true,
-                              "lValueRequested": false,
-                              "subdenomination": null,
-                              "token": "number",
-                              "type": "int_const 0",
-                              "value": "0"
-                            },
-                            "id": 10,
-                            "name": "Literal",
-                            "src": "304:1:0"
-                          }
-                        ],
-                        "id": 11,
-                        "name": "Assignment",
-                        "src": "293:12:0"
-                      }
-                    ],
-                    "id": 12,
-                    "name": "ExpressionStatement",
-                    "src": "293:12:0"
-                  }
-                ],
-                "id": 13,
-                "name": "Block",
-                "src": "178:133:0"
-              }
-            ],
-            "id": 14,
-            "name": "FunctionDefinition",
-            "src": "157:154:0"
-          },
           {
             "attributes": {
               "canonicalName": "vendingMachine.State",
@@ -1608,36 +1660,36 @@
                 "attributes": {
                   "name": "Available"
                 },
-                "id": 15,
+                "id": 2,
                 "name": "EnumValue",
-                "src": "333:9:0"
+                "src": "177:9:0"
               },
               {
                 "attributes": {
                   "name": "LowSupply"
                 },
-                "id": 16,
+                "id": 3,
                 "name": "EnumValue",
-                "src": "344:9:0"
+                "src": "188:9:0"
               },
               {
                 "attributes": {
                   "name": "SoldOut"
                 },
-                "id": 17,
+                "id": 4,
                 "name": "EnumValue",
-                "src": "355:7:0"
+                "src": "199:7:0"
               }
             ],
-            "id": 18,
+            "id": 5,
             "name": "EnumDefinition",
-            "src": "316:50:0"
+            "src": "160:50:0"
           },
           {
             "attributes": {
               "constant": false,
               "name": "owner",
-              "scope": 101,
+              "scope": 117,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "address payable",
@@ -1651,20 +1703,20 @@
                   "stateMutability": "payable",
                   "type": "address payable"
                 },
-                "id": 19,
+                "id": 6,
                 "name": "ElementaryTypeName",
-                "src": "413:15:0"
+                "src": "257:15:0"
               }
             ],
-            "id": 20,
+            "id": 7,
             "name": "VariableDeclaration",
-            "src": "413:28:0"
+            "src": "257:28:0"
           },
           {
             "attributes": {
               "constant": false,
               "name": "skuCount",
-              "scope": 101,
+              "scope": 117,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -1677,20 +1729,20 @@
                   "name": "uint",
                   "type": "uint256"
                 },
-                "id": 21,
+                "id": 8,
                 "name": "ElementaryTypeName",
-                "src": "515:4:0"
+                "src": "359:4:0"
               }
             ],
-            "id": 22,
+            "id": 9,
             "name": "VariableDeclaration",
-            "src": "515:20:0"
+            "src": "359:20:0"
           },
           {
             "attributes": {
               "constant": false,
               "name": "items",
-              "scope": 101,
+              "scope": 117,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(uint256 => struct vendingMachine.Item)",
@@ -1708,36 +1760,36 @@
                       "name": "uint",
                       "type": "uint256"
                     },
-                    "id": 23,
+                    "id": 10,
                     "name": "ElementaryTypeName",
-                    "src": "622:4:0"
+                    "src": "466:4:0"
                   },
                   {
                     "attributes": {
                       "contractScope": null,
                       "name": "Item",
-                      "referencedDeclaration": 39,
+                      "referencedDeclaration": 26,
                       "type": "struct vendingMachine.Item"
                     },
-                    "id": 24,
+                    "id": 11,
                     "name": "UserDefinedTypeName",
-                    "src": "630:4:0"
+                    "src": "474:4:0"
                   }
                 ],
-                "id": 25,
+                "id": 12,
                 "name": "Mapping",
-                "src": "613:22:0"
+                "src": "457:22:0"
               }
             ],
-            "id": 26,
+            "id": 13,
             "name": "VariableDeclaration",
-            "src": "613:28:0"
+            "src": "457:28:0"
           },
           {
             "attributes": {
               "canonicalName": "vendingMachine.Item",
               "name": "Item",
-              "scope": 101,
+              "scope": 117,
               "visibility": "public"
             },
             "children": [
@@ -1745,7 +1797,7 @@
                 "attributes": {
                   "constant": false,
                   "name": "name",
-                  "scope": 39,
+                  "scope": 26,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -1758,20 +1810,20 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 27,
+                    "id": 14,
                     "name": "ElementaryTypeName",
-                    "src": "665:6:0"
+                    "src": "509:6:0"
                   }
                 ],
-                "id": 28,
+                "id": 15,
                 "name": "VariableDeclaration",
-                "src": "665:11:0"
+                "src": "509:11:0"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "skuID",
-                  "scope": 39,
+                  "scope": 26,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1784,20 +1836,20 @@
                       "name": "uint",
                       "type": "uint256"
                     },
-                    "id": 29,
+                    "id": 16,
                     "name": "ElementaryTypeName",
-                    "src": "682:4:0"
+                    "src": "526:4:0"
                   }
                 ],
-                "id": 30,
+                "id": 17,
                 "name": "VariableDeclaration",
-                "src": "682:10:0"
+                "src": "526:10:0"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "price",
-                  "scope": 39,
+                  "scope": 26,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1810,20 +1862,20 @@
                       "name": "uint",
                       "type": "uint256"
                     },
-                    "id": 31,
+                    "id": 18,
                     "name": "ElementaryTypeName",
-                    "src": "698:4:0"
+                    "src": "542:4:0"
                   }
                 ],
-                "id": 32,
+                "id": 19,
                 "name": "VariableDeclaration",
-                "src": "698:10:0"
+                "src": "542:10:0"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "inventory",
-                  "scope": 39,
+                  "scope": 26,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -1836,20 +1888,20 @@
                       "name": "uint",
                       "type": "uint256"
                     },
-                    "id": 33,
+                    "id": 20,
                     "name": "ElementaryTypeName",
-                    "src": "715:4:0"
+                    "src": "559:4:0"
                   }
                 ],
-                "id": 34,
+                "id": 21,
                 "name": "VariableDeclaration",
-                "src": "715:14:0"
+                "src": "559:14:0"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "state",
-                  "scope": 39,
+                  "scope": 26,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "enum vendingMachine.State",
@@ -1861,23 +1913,23 @@
                     "attributes": {
                       "contractScope": null,
                       "name": "State",
-                      "referencedDeclaration": 18,
+                      "referencedDeclaration": 5,
                       "type": "enum vendingMachine.State"
                     },
-                    "id": 35,
+                    "id": 22,
                     "name": "UserDefinedTypeName",
-                    "src": "736:5:0"
+                    "src": "580:5:0"
                   }
                 ],
-                "id": 36,
+                "id": 23,
                 "name": "VariableDeclaration",
-                "src": "736:11:0"
+                "src": "580:11:0"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "seller",
-                  "scope": 39,
+                  "scope": 26,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "address payable",
@@ -1891,19 +1943,19 @@
                       "stateMutability": "payable",
                       "type": "address payable"
                     },
-                    "id": 37,
+                    "id": 24,
                     "name": "ElementaryTypeName",
-                    "src": "753:15:0"
+                    "src": "597:15:0"
                   }
                 ],
-                "id": 38,
+                "id": 25,
                 "name": "VariableDeclaration",
-                "src": "753:22:0"
+                "src": "597:22:0"
               }
             ],
-            "id": 39,
+            "id": 26,
             "name": "StructDefinition",
-            "src": "647:133:0"
+            "src": "491:133:0"
           },
           {
             "attributes": {
@@ -1919,7 +1971,7 @@
                       "constant": false,
                       "indexed": false,
                       "name": "_skuCount",
-                      "scope": 45,
+                      "scope": 32,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1932,21 +1984,21 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 40,
+                        "id": 27,
                         "name": "ElementaryTypeName",
-                        "src": "811:4:0"
+                        "src": "655:4:0"
                       }
                     ],
-                    "id": 41,
+                    "id": 28,
                     "name": "VariableDeclaration",
-                    "src": "811:14:0"
+                    "src": "655:14:0"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "indexed": false,
                       "name": "_productName",
-                      "scope": 45,
+                      "scope": 32,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "string",
@@ -1959,24 +2011,24 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 42,
+                        "id": 29,
                         "name": "ElementaryTypeName",
-                        "src": "827:6:0"
+                        "src": "671:6:0"
                       }
                     ],
-                    "id": 43,
+                    "id": 30,
                     "name": "VariableDeclaration",
-                    "src": "827:19:0"
+                    "src": "671:19:0"
                   }
                 ],
-                "id": 44,
+                "id": 31,
                 "name": "ParameterList",
-                "src": "810:37:0"
+                "src": "654:37:0"
               }
             ],
-            "id": 45,
+            "id": 32,
             "name": "EventDefinition",
-            "src": "795:53:0"
+            "src": "639:53:0"
           },
           {
             "attributes": {
@@ -1991,7 +2043,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_inventory",
-                      "scope": 57,
+                      "scope": 44,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2004,19 +2056,19 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 46,
+                        "id": 33,
                         "name": "ElementaryTypeName",
-                        "src": "886:4:0"
+                        "src": "730:4:0"
                       }
                     ],
-                    "id": 47,
+                    "id": 34,
                     "name": "VariableDeclaration",
-                    "src": "886:15:0"
+                    "src": "730:15:0"
                   }
                 ],
-                "id": 48,
+                "id": 35,
                 "name": "ParameterList",
-                "src": "885:17:0"
+                "src": "729:17:0"
               },
               {
                 "children": [
@@ -2046,16 +2098,16 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                119,
-                                120
+                                135,
+                                136
                               ],
-                              "referencedDeclaration": 119,
+                              "referencedDeclaration": 135,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
-                            "id": 49,
+                            "id": 36,
                             "name": "Identifier",
-                            "src": "907:7:0"
+                            "src": "751:7:0"
                           },
                           {
                             "attributes": {
@@ -2078,13 +2130,13 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 47,
+                                  "referencedDeclaration": 34,
                                   "type": "uint256",
                                   "value": "_inventory"
                                 },
-                                "id": 50,
+                                "id": 37,
                                 "name": "Identifier",
-                                "src": "915:10:0"
+                                "src": "759:10:0"
                               },
                               {
                                 "attributes": {
@@ -2099,39 +2151,211 @@
                                   "type": "int_const 1",
                                   "value": "1"
                                 },
-                                "id": 51,
+                                "id": 38,
                                 "name": "Literal",
-                                "src": "927:1:0"
+                                "src": "771:1:0"
                               }
                             ],
-                            "id": 52,
+                            "id": 39,
                             "name": "BinaryOperation",
-                            "src": "915:13:0"
+                            "src": "759:13:0"
                           }
                         ],
-                        "id": 53,
+                        "id": 40,
                         "name": "FunctionCall",
-                        "src": "907:22:0"
+                        "src": "751:22:0"
                       }
                     ],
-                    "id": 54,
+                    "id": 41,
                     "name": "ExpressionStatement",
-                    "src": "907:22:0"
+                    "src": "751:22:0"
                   },
                   {
-                    "id": 55,
+                    "id": 42,
                     "name": "PlaceholderStatement",
-                    "src": "933:1:0"
+                    "src": "777:1:0"
+                  }
+                ],
+                "id": 43,
+                "name": "Block",
+                "src": "747:34:0"
+              }
+            ],
+            "id": 44,
+            "name": "ModifierDefinition",
+            "src": "709:72:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 117,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 45,
+                "name": "ParameterList",
+                "src": "795:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 46,
+                "name": "ParameterList",
+                "src": "805:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address payable"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7,
+                              "type": "address payable",
+                              "value": "owner"
+                            },
+                            "id": 47,
+                            "name": "Identifier",
+                            "src": "846:5:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 132,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 48,
+                                "name": "Identifier",
+                                "src": "854:3:0"
+                              }
+                            ],
+                            "id": 49,
+                            "name": "MemberAccess",
+                            "src": "854:10:0"
+                          }
+                        ],
+                        "id": 50,
+                        "name": "Assignment",
+                        "src": "846:18:0"
+                      }
+                    ],
+                    "id": 51,
+                    "name": "ExpressionStatement",
+                    "src": "846:18:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 9,
+                              "type": "uint256",
+                              "value": "skuCount"
+                            },
+                            "id": 52,
+                            "name": "Identifier",
+                            "src": "920:8:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "30",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 0",
+                              "value": "0"
+                            },
+                            "id": 53,
+                            "name": "Literal",
+                            "src": "931:1:0"
+                          }
+                        ],
+                        "id": 54,
+                        "name": "Assignment",
+                        "src": "920:12:0"
+                      }
+                    ],
+                    "id": 55,
+                    "name": "ExpressionStatement",
+                    "src": "920:12:0"
                   }
                 ],
                 "id": 56,
                 "name": "Block",
-                "src": "903:34:0"
+                "src": "805:133:0"
               }
             ],
             "id": 57,
-            "name": "ModifierDefinition",
-            "src": "865:72:0"
+            "name": "FunctionDefinition",
+            "src": "784:154:0"
           },
           {
             "attributes": {
@@ -2140,7 +2364,7 @@
               "isConstructor": false,
               "kind": "function",
               "name": "addItem",
-              "scope": 101,
+              "scope": 117,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -2152,7 +2376,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_name",
-                      "scope": 100,
+                      "scope": 102,
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "type": "string",
@@ -2178,7 +2402,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_price",
-                      "scope": 100,
+                      "scope": 102,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2204,7 +2428,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_inventory",
-                      "scope": 100,
+                      "scope": 102,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2237,7 +2461,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 100,
+                      "scope": 102,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -2272,7 +2496,7 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 57,
+                      "referencedDeclaration": 44,
                       "type": "modifier (uint256)",
                       "value": "enoughItems"
                     },
@@ -2330,7 +2554,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 26,
+                                  "referencedDeclaration": 13,
                                   "type": "mapping(uint256 => struct vendingMachine.Item storage ref)",
                                   "value": "items"
                                 },
@@ -2344,7 +2568,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 22,
+                                  "referencedDeclaration": 9,
                                   "type": "uint256",
                                   "value": "skuCount"
                                 },
@@ -2397,7 +2621,7 @@
                                       "typeString": "uint256"
                                     },
                                     {
-                                      "typeIdentifier": "t_enum$_State_$18",
+                                      "typeIdentifier": "t_enum$_State_$5",
                                       "typeString": "enum vendingMachine.State"
                                     },
                                     {
@@ -2408,7 +2632,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 39,
+                                  "referencedDeclaration": 26,
                                   "type": "type(struct vendingMachine.Item storage pointer)",
                                   "value": "Item"
                                 },
@@ -2433,16 +2657,53 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 22,
-                                  "type": "uint256",
-                                  "value": "skuCount"
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "+",
+                                  "type": "uint256"
                                 },
-                                "id": 76,
-                                "name": "Identifier",
-                                "src": "1302:8:0"
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 9,
+                                      "type": "uint256",
+                                      "value": "skuCount"
+                                    },
+                                    "id": 76,
+                                    "name": "Identifier",
+                                    "src": "1302:8:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "31",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 1",
+                                      "value": "1"
+                                    },
+                                    "id": 77,
+                                    "name": "Literal",
+                                    "src": "1311:1:0"
+                                  }
+                                ],
+                                "id": 78,
+                                "name": "BinaryOperation",
+                                "src": "1302:10:0"
                               },
                               {
                                 "attributes": {
@@ -2454,9 +2715,9 @@
                                   "type": "uint256",
                                   "value": "_price"
                                 },
-                                "id": 77,
+                                "id": 79,
                                 "name": "Identifier",
-                                "src": "1325:6:0"
+                                "src": "1327:6:0"
                               },
                               {
                                 "attributes": {
@@ -2468,9 +2729,9 @@
                                   "type": "uint256",
                                   "value": "_inventory"
                                 },
-                                "id": 78,
+                                "id": 80,
                                 "name": "Identifier",
-                                "src": "1350:10:0"
+                                "src": "1352:10:0"
                               },
                               {
                                 "attributes": {
@@ -2490,18 +2751,18 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 18,
+                                      "referencedDeclaration": 5,
                                       "type": "type(enum vendingMachine.State)",
                                       "value": "State"
                                     },
-                                    "id": 79,
+                                    "id": 81,
                                     "name": "Identifier",
-                                    "src": "1375:5:0"
+                                    "src": "1377:5:0"
                                   }
                                 ],
-                                "id": 80,
+                                "id": 82,
                                 "name": "MemberAccess",
-                                "src": "1375:15:0"
+                                "src": "1377:15:0"
                               },
                               {
                                 "attributes": {
@@ -2521,33 +2782,33 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 116,
+                                      "referencedDeclaration": 132,
                                       "type": "msg",
                                       "value": "msg"
                                     },
-                                    "id": 81,
+                                    "id": 83,
                                     "name": "Identifier",
-                                    "src": "1406:3:0"
+                                    "src": "1408:3:0"
                                   }
                                 ],
-                                "id": 82,
+                                "id": 84,
                                 "name": "MemberAccess",
-                                "src": "1406:10:0"
+                                "src": "1408:10:0"
                               }
                             ],
-                            "id": 83,
+                            "id": 85,
                             "name": "FunctionCall",
-                            "src": "1263:160:0"
+                            "src": "1263:162:0"
                           }
                         ],
-                        "id": 84,
+                        "id": 86,
                         "name": "Assignment",
-                        "src": "1245:178:0"
+                        "src": "1245:180:0"
                       }
                     ],
-                    "id": 85,
+                    "id": 87,
                     "name": "ExpressionStatement",
-                    "src": "1245:178:0"
+                    "src": "1245:180:0"
                   },
                   {
                     "children": [
@@ -2568,13 +2829,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 22,
+                              "referencedDeclaration": 9,
                               "type": "uint256",
                               "value": "skuCount"
                             },
-                            "id": 86,
+                            "id": 88,
                             "name": "Identifier",
-                            "src": "1430:8:0"
+                            "src": "1432:8:0"
                           },
                           {
                             "attributes": {
@@ -2597,13 +2858,13 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 22,
+                                  "referencedDeclaration": 9,
                                   "type": "uint256",
                                   "value": "skuCount"
                                 },
-                                "id": 87,
+                                "id": 89,
                                 "name": "Identifier",
-                                "src": "1441:8:0"
+                                "src": "1443:8:0"
                               },
                               {
                                 "attributes": {
@@ -2618,24 +2879,24 @@
                                   "type": "int_const 1",
                                   "value": "1"
                                 },
-                                "id": 88,
+                                "id": 90,
                                 "name": "Literal",
-                                "src": "1452:1:0"
+                                "src": "1454:1:0"
                               }
                             ],
-                            "id": 89,
+                            "id": 91,
                             "name": "BinaryOperation",
-                            "src": "1441:12:0"
+                            "src": "1443:12:0"
                           }
                         ],
-                        "id": 90,
+                        "id": 92,
                         "name": "Assignment",
-                        "src": "1430:23:0"
+                        "src": "1432:23:0"
                       }
                     ],
-                    "id": 91,
+                    "id": 93,
                     "name": "ExpressionStatement",
-                    "src": "1430:23:0"
+                    "src": "1432:23:0"
                   },
                   {
                     "children": [
@@ -2669,13 +2930,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 45,
+                              "referencedDeclaration": 32,
                               "type": "function (uint256,string memory)",
                               "value": "itemAdded"
                             },
-                            "id": 92,
+                            "id": 94,
                             "name": "Identifier",
-                            "src": "1464:9:0"
+                            "src": "1466:9:0"
                           },
                           {
                             "attributes": {
@@ -2683,13 +2944,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 22,
+                              "referencedDeclaration": 9,
                               "type": "uint256",
                               "value": "skuCount"
                             },
-                            "id": 93,
+                            "id": 95,
                             "name": "Identifier",
-                            "src": "1474:8:0"
+                            "src": "1476:8:0"
                           },
                           {
                             "attributes": {
@@ -2701,19 +2962,19 @@
                               "type": "string memory",
                               "value": "_name"
                             },
-                            "id": 94,
+                            "id": 96,
                             "name": "Identifier",
-                            "src": "1484:5:0"
+                            "src": "1486:5:0"
                           }
                         ],
-                        "id": 95,
+                        "id": 97,
                         "name": "FunctionCall",
-                        "src": "1464:26:0"
+                        "src": "1466:26:0"
                       }
                     ],
-                    "id": 96,
+                    "id": 98,
                     "name": "EmitStatement",
-                    "src": "1459:31:0"
+                    "src": "1461:31:0"
                   },
                   {
                     "attributes": {
@@ -2733,34 +2994,214 @@
                           "type": "bool",
                           "value": "true"
                         },
-                        "id": 97,
+                        "id": 99,
                         "name": "Literal",
-                        "src": "1503:4:0"
+                        "src": "1505:4:0"
                       }
                     ],
-                    "id": 98,
+                    "id": 100,
                     "name": "Return",
-                    "src": "1496:11:0"
+                    "src": "1498:11:0"
                   }
                 ],
-                "id": 99,
+                "id": 101,
                 "name": "Block",
-                "src": "1075:440:0"
+                "src": "1075:442:0"
               }
             ],
-            "id": 100,
+            "id": 102,
             "name": "FunctionDefinition",
-            "src": "958:557:0"
+            "src": "958:559:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getItems",
+              "scope": 117,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "index",
+                      "scope": 116,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 103,
+                        "name": "ElementaryTypeName",
+                        "src": "1539:4:0"
+                      }
+                    ],
+                    "id": 104,
+                    "name": "VariableDeclaration",
+                    "src": "1539:10:0"
+                  }
+                ],
+                "id": 105,
+                "name": "ParameterList",
+                "src": "1538:12:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 116,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 106,
+                        "name": "ElementaryTypeName",
+                        "src": "1572:4:0"
+                      }
+                    ],
+                    "id": 107,
+                    "name": "VariableDeclaration",
+                    "src": "1572:4:0"
+                  }
+                ],
+                "id": 108,
+                "name": "ParameterList",
+                "src": "1571:6:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 108
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "price",
+                              "referencedDeclaration": 19,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct vendingMachine.Item storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 13,
+                                      "type": "mapping(uint256 => struct vendingMachine.Item storage ref)",
+                                      "value": "items"
+                                    },
+                                    "id": 109,
+                                    "name": "Identifier",
+                                    "src": "1592:5:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 104,
+                                      "type": "uint256",
+                                      "value": "index"
+                                    },
+                                    "id": 110,
+                                    "name": "Identifier",
+                                    "src": "1598:5:0"
+                                  }
+                                ],
+                                "id": 111,
+                                "name": "IndexAccess",
+                                "src": "1592:12:0"
+                              }
+                            ],
+                            "id": 112,
+                            "name": "MemberAccess",
+                            "src": "1592:18:0"
+                          }
+                        ],
+                        "id": 113,
+                        "name": "TupleExpression",
+                        "src": "1591:20:0"
+                      }
+                    ],
+                    "id": 114,
+                    "name": "Return",
+                    "src": "1584:27:0"
+                  }
+                ],
+                "id": 115,
+                "name": "Block",
+                "src": "1578:38:0"
+              }
+            ],
+            "id": 116,
+            "name": "FunctionDefinition",
+            "src": "1521:95:0"
           }
         ],
-        "id": 101,
+        "id": 117,
         "name": "ContractDefinition",
-        "src": "127:1406:0"
+        "src": "127:1621:0"
       }
     ],
-    "id": 102,
+    "id": 118,
     "name": "SourceUnit",
-    "src": "32:1502:0"
+    "src": "32:1717:0"
   },
   "compiler": {
     "name": "solc",
@@ -2768,7 +3209,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-10-14T18:02:11.971Z",
+  "updatedAt": "2021-10-14T19:17:23.959Z",
   "devdoc": {
     "methods": {}
   },

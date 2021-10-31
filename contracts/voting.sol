@@ -2,15 +2,22 @@
 pragma solidity >=0.5.16 <0.9.0;
 
 // import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-contract vendingMachine {
-
-
-
+contract voting {
+  uint totalVotes; 
+    
+  struct Vote {
+    address voterAddress;
+    uint votes; 
+    string message; 
+    uint timestamp; 
+  }
 
 
   enum State {
-    Available, LowSupply, SoldOut
-  }
+    Created, Voting, Ended
+  } State public state
+
+
 //array of addresses of no specified length
   address payable public owner; 
 
@@ -40,7 +47,7 @@ modifier enoughItems(uint _inventory) {
 }
   constructor() public {  // constructor initialises once. 
     owner = msg.sender; // the person who deployed constract is the owner
-    skuCount = 0; 
+    
   }
 
   // Functions

@@ -51,7 +51,8 @@ contract voting {
   // Functions
 
   // 1. Create the voting function
-  function vote(string memory _message, uint proposal) public {
+  function vote(string memory _message, uint proposal) public payable {
+    require(msg.value == 1000000000000000);
     totalVotes +=1; // increment total vote counts
     // console.log("%s has voted!", msg.sender); // create a console log indicating a vote event
     Voter storage sender = voters[msg.sender]; // create new 'Voter' struct named sender within voters mapping
@@ -62,6 +63,7 @@ contract voting {
     proposals[proposal].voteCount +=1; 
   }
 
+// 2. Create a function for obtaining the index of the winning Proposal
   function winningProposal() public view returns (uint winningProposal_) {
     uint winningVoteCount = 0;
 
@@ -73,10 +75,17 @@ contract voting {
     }
   }
 
-
+// 3. Create a function for obtaining the string name of the winning proposal
   function winnerName() public view returns (string memory winnerName_) {
     winnerName_ = proposals[winningProposal()].name;
   }
+
+  // 4. Create a function for obtaining the total votes on the proposal
+  function getTotalVotes() public view returns (uint256) {
+    return totalVotes;
+  }
+
+
 
 
 

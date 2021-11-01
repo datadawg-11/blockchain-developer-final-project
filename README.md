@@ -40,3 +40,4 @@ https://gist.github.com/hanssv/deaacfc9be2929683087484684164e6b
 https://cryptodetail.com/logic-voting-contract
 https://www.toshblocks.com/solidity/complete-example-voting-ballot-smart-contract/
 https://medium.com/coinmonks/voting-on-a-blockchain-solidity-contract-codes-explained-c677996d94f2
+https://stackoverflow.com/questions/68691636/ethereum-lottery-smart-contract-with-the-following-conditions

@@ -32,10 +32,10 @@ contract voting {
 // event itemAdded(uint _skuCount, string _productName);
 
   // Modifiers
-// modifier enoughItems(uint _inventory) {
-//   require(_inventory>=1);
-//   _;
-// }
+modifier notOwner() {
+  require(msg.sender != chairperson);
+  _;
+}
   constructor(string[] memory proposalNames) public {  // constructor initialises once. 
     chairperson = msg.sender; // the person who deployed constract is the owner
     
@@ -51,8 +51,8 @@ contract voting {
   // Functions
 
   // 1. Create the voting function
-  function vote(string memory _message, uint proposal) public payable {
-    require(msg.value == 1000000000000000);
+  function vote(string memory _message, uint proposal) public payable notOwner() {
+    // require(msg.value == 1000000000000000);
     totalVotes +=1; // increment total vote counts
     // console.log("%s has voted!", msg.sender); // create a console log indicating a vote event
     Voter storage sender = voters[msg.sender]; // create new 'Voter' struct named sender within voters mapping

@@ -10,6 +10,11 @@ contract voting {
   mapping (address => Voter) voters; // mapping of items for sale. So each skuID corresponds to a dictionary
   Proposal[] public proposals; // initialise an empty array of proposals
   
+  uint public totalTokens; // Available tokens for this election
+  uint public balanceTokens; // Total tokens still available for purchase
+  uint public tokenPrice; //Price per token 
+
+
   struct Voter {
     // address voterAddress; // address of voter
     uint vote; // the index of the thing voted for
@@ -84,6 +89,13 @@ modifier notOwner() {
   function getTotalVotes() public view returns (uint256) {
     return totalVotes;
   }
+
+// 5. Create a function for returning the votes a candidate has received so far
+function totalVotesFor(uint _index) public view returns (uint256) {
+  return proposals[_index].voteCount;
+} 
+
+// function validCandidate()
 
 
 

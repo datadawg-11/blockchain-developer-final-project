@@ -17,13 +17,15 @@ contract voting {
   uint tokenPrice; //Price per token 
   
   mapping (address => Voter) public voterRegister; // mapping of voters 
+    
     struct Voter {
-    address voterAddress; // address of voter
     uint vote; // the index of the thing voted for
     // uint voteNumber; // number of votes that voter has given
     string message; // message of the voter
     uint timestamp; // timetamp of the vote
     bool voted; // whether the voter has voted
+    voterStatus status; //whether the voter is verified
+    
   }
   
   Proposal[] public proposals; // initialise an empty array of proposals which are the candidates
@@ -33,6 +35,7 @@ contract voting {
   }
 
 
+    enum voterStatus {unverified, verified} 
   enum State {Created, Voting, Ended} State public state;
 
 
@@ -50,6 +53,11 @@ modifier onlyOwner() {
   _;
 }
 
+modifier inState(State _state) {
+    require(state == _state);
+    _;
+}
+
   constructor(string[] memory proposalNames) public {  // constructor initialises once. 
     chairperson = msg.sender; // the person who deployed constract is the owner
     
@@ -65,20 +73,31 @@ modifier onlyOwner() {
   
 
   // Functions
-  function addVoter(address _voterAddress) public onlyOwner() {
+  function addVoter(address _voterAddress) public onlyOwner() inState(State.Created) {
         Voter memory v;
         v.voted = false;
-        v.voterAddress = msg.sender;
+        v.status = voterStatus.verified;
         voterRegister[_voterAddress] = v;
+        
         totalVotersRegistered++;
         // emit voterAdded(_voterAddress);
+    }
+    
+    function startVote() public onlyOwner() inState(State.Created) {
+        state = State.Voting;
+    }
+    
+    function endVote() public onlyOwner() inState(State.Voting) {
+        state = State.Ended;
     }
 
 
 
   // 1. Create the voting function
-  function vote(string memory _message, uint proposal) public payable notOwner() {
+  function vote(string memory _message, uint proposal) public notOwner() inState(State.Voting) {
     // require(msg.value == 1000000000000000);
+    
+    if (voterRegister[msg.sender].voted == false) {
     totalVotes ++; // increment total vote counts
     // console.log("%s has voted!", msg.sender); // create a console log indicating a vote event
     Voter storage sender = voterRegister[msg.sender]; // create new 'Voter' struct named sender within voters mapping
@@ -88,10 +107,13 @@ modifier onlyOwner() {
     sender.timestamp = block.timestamp;
 
     proposals[proposal].voteCount +=1; 
+  
+        
+    }
   }
 
 // 2. Create a function for obtaining the index of the winning Proposal
-  function winningProposal() public view returns (uint winningProposal_) {
+  function winningProposal() public view inState(State.Ended) returns (uint winningProposal_) {
     uint winningVoteCount = 0;
 
     for (uint p=0; p< proposals.length; p++) {
@@ -103,7 +125,7 @@ modifier onlyOwner() {
   }
 
 // 3. Create a function for obtaining the string name of the winning proposal
-  function winnerName() public view returns (string memory winnerName_) {
+  function winnerName() public view inState(State.Ended) returns (string memory winnerName_) {
     winnerName_ = proposals[winningProposal()].name;
   }
 

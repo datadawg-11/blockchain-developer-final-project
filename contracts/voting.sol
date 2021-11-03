@@ -1,36 +1,39 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.5.16 <0.9.0;
 pragma experimental ABIEncoderV2;
-// import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+
+// import "@openzeppelin/contracts/access/AccessControl.sol";
+// import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+
 
 contract voting {
   // State variables
-  uint256 totalVotes; // total votes received
+  uint256 public totalVotes; // total votes received
+  uint public totalVotersRegistered; // amount of people registered
   address public chairperson;  // address of the contract deployer is chairperson
-  mapping (address => Voter) voters; // mapping of items for sale. So each skuID corresponds to a dictionary
-  Proposal[] public proposals; // initialise an empty array of proposals
   
-  uint public totalTokens; // Available tokens for this election
-  uint public balanceTokens; // Total tokens still available for purchase
-  uint public tokenPrice; //Price per token 
-
-
-  struct Voter {
-    // address voterAddress; // address of voter
+  uint totalTokens; // Available tokens for this election
+  uint balanceTokens; // Total tokens still available for purchase
+  uint tokenPrice; //Price per token 
+  
+  mapping (address => Voter) voterRegister; // mapping of voters 
+    struct Voter {
+    address voterAddress; // address of voter
     uint vote; // the index of the thing voted for
     // uint voteNumber; // number of votes that voter has given
     string message; // message of the voter
     uint timestamp; // timetamp of the vote
+    bool voted; // whether the voter has voted
   }
-
-  struct Proposal {
+  
+  Proposal[] public proposals; // initialise an empty array of proposals which are the candidates
+    struct Proposal {
     string name; // name of the proposal
     uint voteCount; // number of accumulated votes
   }
 
-  enum State {
-    Created, Voting, Ended
-  } State public state;
+
+  enum State {Created, Voting, Ended} State public state;
 
 
   // Events
@@ -41,26 +44,43 @@ modifier notOwner() {
   require(msg.sender != chairperson);
   _;
 }
+
+modifier onlyOwner() {
+  require(msg.sender == chairperson);
+  _;
+}
+
   constructor(string[] memory proposalNames) public {  // constructor initialises once. 
     chairperson = msg.sender; // the person who deployed constract is the owner
     
+
     for (uint i = 0 ; i < proposalNames.length; i++) {
       proposals.push(Proposal({
         name: proposalNames[i],
         voteCount:0
       })); 
       }
+      state = State.Created;
     }
   
 
   // Functions
+  function addVoter(address _voterAddress) public onlyOwner() {
+        Voter memory v;
+        v.voted = false;
+        voterRegister[_voterAddress] = v;
+        totalVotersRegistered++;
+        // emit voterAdded(_voterAddress);
+    }
+
+
 
   // 1. Create the voting function
   function vote(string memory _message, uint proposal) public payable notOwner() {
     // require(msg.value == 1000000000000000);
-    totalVotes +=1; // increment total vote counts
+    totalVotes ++; // increment total vote counts
     // console.log("%s has voted!", msg.sender); // create a console log indicating a vote event
-    Voter storage sender = voters[msg.sender]; // create new 'Voter' struct named sender within voters mapping
+    Voter storage sender = voterRegister[msg.sender]; // create new 'Voter' struct named sender within voters mapping
     sender.vote = proposal; 
     sender.message = _message;  
     sender.timestamp = block.timestamp;

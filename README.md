@@ -23,7 +23,7 @@ In addition, users will be able to buy their selected items.
 
   
 ## User Workflow
-1. Initially the website will have two super-hero characters. Once the contract is deployed a timer should be set off initially for a set period. 
+1. Initially the website will have two people to vote for.  timer should be set off initially for a set period. 
 2. The users will then be able to send waves/votes to either party based on their preference
 3. The votes should populate a wall and the amount of votes bought 
 4. Once the time is out, whoever received the most votes win. 
@@ -36,6 +36,13 @@ In addition, users will be able to buy their selected items.
 
 
 ## Resources and credits for inspiration
+Main Resource then improve
+https://medium.com/coinmonks/voting-on-a-blockchain-solidity-contract-codes-explained-c677996d94f2
+
+
+
+
+
 https://gist.github.com/hanssv/deaacfc9be2929683087484684164e6b
 https://cryptodetail.com/logic-voting-contract
 https://www.toshblocks.com/solidity/complete-example-voting-ballot-smart-contract/

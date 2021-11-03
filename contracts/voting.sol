@@ -16,7 +16,7 @@ contract voting {
   uint balanceTokens; // Total tokens still available for purchase
   uint tokenPrice; //Price per token 
   
-  mapping (address => Voter) voterRegister; // mapping of voters 
+  mapping (address => Voter) public voterRegister; // mapping of voters 
     struct Voter {
     address voterAddress; // address of voter
     uint vote; // the index of the thing voted for
@@ -68,6 +68,7 @@ modifier onlyOwner() {
   function addVoter(address _voterAddress) public onlyOwner() {
         Voter memory v;
         v.voted = false;
+        v.voterAddress = msg.sender;
         voterRegister[_voterAddress] = v;
         totalVotersRegistered++;
         // emit voterAdded(_voterAddress);
@@ -82,7 +83,8 @@ modifier onlyOwner() {
     // console.log("%s has voted!", msg.sender); // create a console log indicating a vote event
     Voter storage sender = voterRegister[msg.sender]; // create new 'Voter' struct named sender within voters mapping
     sender.vote = proposal; 
-    sender.message = _message;  
+    sender.message = _message;
+    sender.voted = true;
     sender.timestamp = block.timestamp;
 
     proposals[proposal].voteCount +=1; 
@@ -113,20 +115,17 @@ modifier onlyOwner() {
 // 5. Create a function for returning the votes a candidate has received so far
 function totalVotesFor(uint _index) public view returns (uint256) {
   return proposals[_index].voteCount;
-} 
-
-// function validCandidate()
-
-
-
-
-
-
-
-
-
+}
 
 }
+
+
+
+
+
+
+
+
   
 
 

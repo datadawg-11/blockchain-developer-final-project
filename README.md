@@ -39,7 +39,7 @@ In addition, users will be able to buy their selected items.
 Main Resource then improve
 https://medium.com/coinmonks/voting-on-a-blockchain-solidity-contract-codes-explained-c677996d94f2
 
-
+https://github.com/jacksonng77/ballot/blob/master/ballot.sol
 
 
 

@@ -96,8 +96,7 @@ modifier inState(State _state) {
   // 1. Create the voting function
   function vote(string memory _message, uint proposal) public notOwner() inState(State.Voting) {
     // require(msg.value == 1000000000000000);
-    
-    if (voterRegister[msg.sender].voted == false) {
+    require(voterRegister[msg.sender].voted == false, "Already Voted");
     totalVotes ++; // increment total vote counts
     // console.log("%s has voted!", msg.sender); // create a console log indicating a vote event
     Voter storage sender = voterRegister[msg.sender]; // create new 'Voter' struct named sender within voters mapping
@@ -107,9 +106,8 @@ modifier inState(State _state) {
     sender.timestamp = block.timestamp;
 
     proposals[proposal].voteCount +=1; 
-  
-        
-    }
+    
+    
   }
 
 // 2. Create a function for obtaining the index of the winning Proposal

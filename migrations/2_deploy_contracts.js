@@ -1,5 +1,5 @@
-const ProofOfExistence1 = artifacts.require('./ProofOfExistence1.sol');
+var Voting = artifacts.require('voting');
 
 module.exports = function(deployer) {
-    deployer.deploy(ProofOfExistence1);
+    deployer.deploy(Voting,["mason","sarah"]);
 };

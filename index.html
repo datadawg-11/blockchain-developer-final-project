@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Simple Dapp</title>
     <script src="dapp.js" defer></script>
+    <!-- Using a CDN (Content Delivery Network) to obtain a package rather than installing -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 
 
 
@@ -17,19 +19,24 @@
     <div id='mm-currentAccount'></div>
 
     <h2>1. Chairperson to Add Voters to the list</h2>
+    <div>Add voter by their address</div>
+    <input id="voting-address" type="text"   placeholder="Provide address">
+    <button id='voting-address-button'>Submit Address</button>
 
 
 
     <h2>2. Chairperson Start the Voting</h2>
-
+    <button id="start-vote">Start Vote</button>
 
 
     <h2>3. Let the voting begin</h2>
-
+    <input id="vote-msg" type="text" placeholder="Transaction Message">
+    <input id="vote-choice" type="number" placeholder="Index of Choice">
+    <button id="submit-vote">Submit Vote</button>
 
 
     <h2>4. Chairperson to stop the voting</h2>
-
+    <button id="end-vote">End Vote</button>
 
 
     <h2></h2>

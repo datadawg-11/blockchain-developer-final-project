@@ -1,7 +1,7 @@
 // const { send } = require("process")
 
 // Contract deployed on the local blockchain
-const votingAddress = '0xf2fDD514c8B74dF0B15e6C9C5D1b5be5545EE21d'
+const votingAddress = '0x642bdBb3c585aC98c23fBf9B3D546710cbBC972E'
 
 const votingABI = [
 	{
@@ -272,6 +272,9 @@ window.addEventListener('load', function() {
         let mmDetected = document.getElementById('mm-detected')
         mmDetected.innerHTML = "Metamask detected"
 
+        const deployedAddress = document.getElementById("voting-deployed-address");
+        deployedAddress.innerText = `Contract Address is deployed to ${votingAddress}`;
+
     }
 
     else {
@@ -290,6 +293,21 @@ mmEnable.onclick = async () => {
     console.log('beep') 
     await ethereum.request({method:'eth_requestAccounts'})
     mmAccount.innerText = `Connected to ${window.ethereum.selectedAddress}`;
+}
+
+
+const votingGetChairpersonButton = document.getElementById('get-chairperson-button');
+const votingChairpersonAddress = document.getElementById('chairperson-address');
+
+votingGetChairpersonButton.onclick = async () => {
+
+
+    var web3 = new Web3(window.ethereum)
+    const voting = new web3.eth.Contract(votingABI, votingAddress)
+    // voting.setProvider(window.ethereum)
+
+    await voting.methods.chairperson().call()
+
 }
 
 // var web3 = new web3(window.ethereum);

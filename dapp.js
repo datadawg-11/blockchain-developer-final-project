@@ -306,8 +306,10 @@ votingGetChairpersonButton.onclick = async () => {
     const voting = new web3.eth.Contract(votingABI, votingAddress)
     // voting.setProvider(window.ethereum)
 
-    await voting.methods.chairperson().call()
-
+    let chairAddress = await voting.methods.chairperson().call({from:ethereum.selectedAddress})
+	// console.log(x);
+	votingChairpersonAddress.innerText = `Address of chairperson: ${chairAddress}`;
+	
 }
 
 // var web3 = new web3(window.ethereum);
@@ -351,13 +353,15 @@ const votingEndVote = document.getElementById('end-vote');
 votingEndVote.onclick = async () => {
     console.log("button pressed for ending the vote")
     
-    var web3 = new Web3(window.ethereum)
+    var web3 = new Web3(window.ethereum) //metamask no longer injects web3 so you have to include this
     
     const voting = new web3.eth.Contract(votingABI, votingAddress)
     // voting.setProvider(window.ethereum)
 
     await voting.methods.endVote().send({from:ethereum.selectedAddress})
 
+
+	
 
 }
 

@@ -10,7 +10,6 @@
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 
 
-
 </head>
 <body>
     <h1>Voting Dapp</h1>
@@ -24,12 +23,14 @@
     <div id="chairperson-address">Address of chairperson: </div>
 
 
-
-
     <h2>1. Chairperson to Add Voters to the list</h2>
     <div>Add voter by their address</div>
     <input id="voting-address" type="text"   placeholder="Provide address">
     <button id='voting-address-button'>Submit Address</button>
+
+    <div>Total Voters that are registered</div>
+    <button id='obtain-number-of-voters'> Get total voters registered</button>
+    <div id = 'total-voters-text'>Total Voters : 0</div>
 
 
 

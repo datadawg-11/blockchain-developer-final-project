@@ -321,7 +321,26 @@ votingSubmitUser.onclick = async () => {
     const votingAddressSubmit = document.getElementById("voting-address").value;
     console.log(votingAddressSubmit);
 
+	var web3 = new Web3(window.ethereum)
+    const voting = new web3.eth.Contract(votingABI, votingAddress)
+	await voting.methods.addVoter(votingAddressSubmit).send({from:ethereum.selectedAddress});
+
 }
+
+// Setup the functions for public to return total voters that are registered
+
+const getVoterButton = document.getElementById('obtain-number-of-voters');
+const totalVoterText = document.getElementById('total-voters-text');
+
+getVoterButton.onclick =  async () => {
+	var web3 = new Web3(window.ethereum)
+    const voting = new web3.eth.Contract(votingABI, votingAddress)
+	
+	let registered = await voting.methods.totalVotersRegistered().call({from:ethereum.selectedAddress});
+	totalVoterText.innerText = `Total Voters : ${registered}`
+}
+
+
 
 // Setup the functions for the chairperson to start button
 const votingStart = document.getElementById("start-vote");

@@ -1,7 +1,7 @@
 // const { send } = require("process")
 
 // Contract deployed on the local blockchain
-const votingAddress = '0x642bdBb3c585aC98c23fBf9B3D546710cbBC972E'
+const votingAddress = '0xe484BB4740e9D00b620300f7FAF212956B5A92EF'
 
 const votingABI = [
 	{
@@ -379,8 +379,24 @@ votingEndVote.onclick = async () => {
 
     await voting.methods.endVote().send({from:ethereum.selectedAddress})
 
+}
 
+const stateButton = document.getElementById('state-button');
+
+stateButton.onclick = async () => {
+	console.log('get button for state pressed');
 	
+	var web3 = new Web3(window.ethereum); 
+
+	const voting = new web3.eth.Contract(votingABI, votingAddress) 
+
+	let stateIndex = await voting.methods.state().call({from:ethereum.selectedAddress});
+	
+	
+	const stateText = document.getElementById('state-text');
+	stateText.innerText = `State of the network is : ${stateIndex}`;
+
+
 
 }
 

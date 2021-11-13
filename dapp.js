@@ -1,7 +1,7 @@
 // const { send } = require("process")
 
 // Contract deployed on the local blockchain
-const votingAddress = '0xe484BB4740e9D00b620300f7FAF212956B5A92EF'
+const votingAddress = '0xC5b65146d7440125a320A53a7e31142b3318F6c9'
 
 const votingABI = [
 	{
@@ -362,6 +362,26 @@ const votingCast = document.getElementById('submit-vote');
 
 votingCast.onclick = async () => {
     console.log("button for casting the vote has been pressed")
+	
+	let votingMessage = document.getElementById('vote-msg').value
+	console.log(votingMessage.value)
+
+	let votingChoice = document.getElementById('vote-choice').value
+	console.log(votingChoice.value)
+
+	var web3 = new Web3(window.ethereum)
+    
+    const voting = new web3.eth.Contract(votingABI, votingAddress)
+    // voting.setProvider(window.ethereum)
+
+    await voting.methods.vote(votingMessage, votingChoice).send({from:ethereum.selectedAddress})
+
+
+
+
+
+
+
 }
 
 

@@ -376,14 +376,26 @@ votingCast.onclick = async () => {
 
     await voting.methods.vote(votingMessage, votingChoice).send({from:ethereum.selectedAddress})
 
+}
 
 
+const votingTotalVotesReceived = document.getElementById('button-get-total-votes'); 
+
+votingTotalVotesReceived.onclick = async () => {
+	const votingTextTotalVotesReceived = document.getElementById('text-total-votes-received')
+
+	var web3 = new Web3(window.ethereum);
+
+	const voting = new web3.eth.Contract(votingABI, votingAddress)
+
+	let _totalvotes = await voting.methods.getTotalVotes().call({from:ethereum.selectedAddress})
+
+	votingTextTotalVotesReceived.innerText = `Total votes received : ${_totalvotes}`;
 
 
 
 
 }
-
 
 
 // Setup the functions to end the vote
@@ -401,6 +413,9 @@ votingEndVote.onclick = async () => {
 
 }
 
+
+
+// Setup the functions to return the state of the network
 const stateButton = document.getElementById('state-button');
 
 stateButton.onclick = async () => {

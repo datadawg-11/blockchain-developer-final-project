@@ -282,7 +282,6 @@ window.addEventListener('load', function() {
         alert("Download and install metamask")
     }
 
-
 })
 
 
@@ -339,6 +338,9 @@ getVoterButton.onclick =  async () => {
 	let registered = await voting.methods.totalVotersRegistered().call({from:ethereum.selectedAddress});
 	totalVoterText.innerText = `Total Voters : ${registered}`
 }
+
+// Setup the function to obtain the registry of the voter
+
 
 
 
@@ -428,6 +430,7 @@ votesCandidateTwo.onclick = async () => {
 
 // Setup the functions to end the vote
 const votingEndVote = document.getElementById('end-vote'); 
+const votingWinner = document.getElementById('winners-text')
 
 votingEndVote.onclick = async () => {
     console.log("button pressed for ending the vote")
@@ -438,6 +441,10 @@ votingEndVote.onclick = async () => {
     // voting.setProvider(window.ethereum)
 
     await voting.methods.endVote().send({from:ethereum.selectedAddress})
+	let _winnerName = await voting.methods.winnerName().call({from:ethereum.selectedAddress});
+	let _winnerProposal = await voting.methods.winningProposal().call({from:ethereum.selectedAddress})
+
+	votingWinner.innerText = `The winner of this round is ${_winnerName}!`
 
 }
 
@@ -458,8 +465,6 @@ stateButton.onclick = async () => {
 	
 	const stateText = document.getElementById('state-text');
 	stateText.innerText = `State of the network is : ${stateIndex}`;
-
-
 
 }
 

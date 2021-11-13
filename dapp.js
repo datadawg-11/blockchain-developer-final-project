@@ -378,7 +378,7 @@ votingCast.onclick = async () => {
 
 }
 
-
+// Setup the button to retreive total votes so far in the voting stage
 const votingTotalVotesReceived = document.getElementById('button-get-total-votes'); 
 
 votingTotalVotesReceived.onclick = async () => {
@@ -392,10 +392,38 @@ votingTotalVotesReceived.onclick = async () => {
 
 	votingTextTotalVotesReceived.innerText = `Total votes received : ${_totalvotes}`;
 
+}
 
+// Setup the functions to obtain the votes so far for candidate 1 and 2
+const candidateVotes= document.getElementById('text-total-candidate-votes');
+const votesCandidateOne = document.getElementById('votes-for-candidate-1');
+const votesCandidateTwo = document.getElementById('votes-for-candidate-2');
+
+votesCandidateOne.onclick = async () => {
+	console.log("Button - Votes for Candidate 1 Pressed")
+	var web3 = new Web3(window.ethereum);
+
+	const voting = new web3.eth.Contract(votingABI, votingAddress)
+
+	let _totalVotesFor = await voting.methods.totalVotesFor(0).call({from:ethereum.selectedAddress})
+	candidateVotes.innerText = `Total votes for candidate 1 is : ${_totalVotesFor}`;
 
 
 }
+
+
+votesCandidateTwo.onclick = async () => {
+	console.log("Button - Votes for Candidate 2 Pressed")
+	var web3 = new Web3(window.ethereum);
+
+	const voting = new web3.eth.Contract(votingABI, votingAddress)
+
+	let _totalVotesFor = await voting.methods.totalVotesFor(1).call({from:ethereum.selectedAddress})
+	candidateVotes.innerText = `Total votes for candidate 1 is : ${_totalVotesFor}`;
+
+}
+
+
 
 
 // Setup the functions to end the vote

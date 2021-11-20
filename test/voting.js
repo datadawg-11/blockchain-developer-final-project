@@ -40,14 +40,19 @@ contract("voting", function (accounts) {
       // get the contract that has been deployed
       const votingInstance = await voting.deployed(); 
 
-      const _proposalOne = await votingInstance.proposals[0]["name"];
-      assert.equal(_proposalOne,"mason","Proposal one should be 'mason'")
-
-
-
-
+      const _proposalOne = await votingInstance.proposals(0);
+      assert.equal(_proposalOne.name,"mason","Proposal one should be 'mason'")
 
   })
+
+  it("voting should have the second proposal name as sarah", async () => {
+    // get the contract that has been deployed
+    const votingInstance = await voting.deployed(); 
+
+    const _proposalOne = await votingInstance.proposals(1);
+    assert.equal(_proposalOne.name,"sarah","Proposal two should be 'sarah'")
+
+})
 
 
 
@@ -56,16 +61,16 @@ contract("voting", function (accounts) {
     const votingInstance = await voting.deployed(); 
 
     try {
-      await votingInstance.startVote({from:accounts[0]}); //for some reason, function with the accounts work
+      await votingInstance.startVote({from:accounts[1]}); //for some reason, function with the accounts work
       console.log('voting success')
     } catch(err) {
-      console.log('error reported')
+      console.log('voting reported an error')
      }
 
     const currentState = await votingInstance.state.call();
     // console.log(currentState)
 
-    assert.equal(currentState,1,"state was not changed")
+    assert.equal(currentState,0,"state was not changed")
 
 
   })

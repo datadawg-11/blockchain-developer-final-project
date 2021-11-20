@@ -1,7 +1,7 @@
 // const { send } = require("process")
 
 // Contract deployed on the local blockchain
-const votingAddress = '0xC5b65146d7440125a320A53a7e31142b3318F6c9'
+const votingAddress = '0x45E5b587fb9599930C1Bb5bF031cB7a439e48E68'
 
 const votingABI = [
 	{

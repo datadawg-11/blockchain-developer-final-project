@@ -912,11 +912,17 @@
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {
+    "1337": {
+      "events": {},
+      "links": {},
+      "address": "0x72d638c0dd79621EA65018fC86Ba3031d562b6E8",
+      "transactionHash": "0x454ff946345749a1b049466ca10454c7ea87f86a8587c82ae284454cec7cef44"
+    },
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x20DA77071f83F62223B8dCDC8a4CAb927aCC751c",
-      "transactionHash": "0xe4f7af56567e82403960e7a63a42e35c2d434cc29a182d8c86d39231d9dca64f"
+      "address": "0xF952Db76ba4f1C0Dbc313a73f61e30F5d593AA63",
+      "transactionHash": "0xe3f0b5893ff75de2489170f2ef5346ec0173d97a572305020b9cae97c1369e07"
     },
     "1636014584430": {
       "events": {},
@@ -935,10 +941,34 @@
       "links": {},
       "address": "0xf92BD8Afaf90A0B41A25ea4f2dd582174B198007",
       "transactionHash": "0x2b6a68a74f6b7e2b7f2849d05ae85a1dd07e5129ae51e816e9847fbef9052b39"
+    },
+    "1637330197422": {
+      "events": {},
+      "links": {},
+      "address": "0x41754430d9357a8139bd1210de2212Bc6b507887",
+      "transactionHash": "0x4239737bedf0a5613b8fbaca91cef6849a3f01189d7a4c9bf2f5a8e5942612a7"
+    },
+    "1637336452302": {
+      "events": {},
+      "links": {},
+      "address": "0x732B15aEA5957B4dACB10f21a3C33BE27F6f5342",
+      "transactionHash": "0x16c3ae9a007b05bd5cd916bfee31a9fd8c27d8feb93f48f155b2fcc82ca7eba1"
+    },
+    "1637375842505": {
+      "events": {},
+      "links": {},
+      "address": "0xEAB398C3215aB0501ec02cc19F758b0cB8DD393B",
+      "transactionHash": "0x1304f5848408888e855b8a3e37d7b2ce7be16752abf0b78cef25550ff51894f5"
+    },
+    "1637380122457": {
+      "events": {},
+      "links": {},
+      "address": "0x610bc416F92C717357387676bbEA30E54ee053a3",
+      "transactionHash": "0x798a5e9ac2fd83172947855e8714dd972d923005dac780884626b5cb75a001a5"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-11-15T09:04:20.107Z",
+  "updatedAt": "2021-11-20T04:00:39.846Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

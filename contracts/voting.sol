@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.5.16 <0.9.0;
-
 pragma experimental ABIEncoderV2;
 
-import "@openzeppelin/contracts/access/AccessControl.sol";
+// import "@openzeppelin/contracts/ownership/Ownable.sol";
 // import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+// import "../installed_contracts/zeppelin/contracts/ownership/Ownable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
 
-contract voting {
+contract voting is Ownable {
   // State variables
   uint256 public totalVotes; // total votes received
   uint public totalVotersRegistered; // amount of people registered
@@ -49,17 +50,17 @@ modifier notOwner() {
   _;
 }
 
-modifier onlyOwner() {
-  require(msg.sender == chairperson);
-  _;
-}
+// modifier onlyOwner() {
+//   require(msg.sender == chairperson);
+//   _;
+// }
 
 modifier inState(State _state) {
     require(state == _state);
     _;
 }
 
-  constructor(string[] memory proposalNames) public {  // constructor initialises once. 
+  constructor(string[] memory proposalNames) {  // constructor initialises once. 
     chairperson = msg.sender; // the person who deployed constract is the owner
     
 
@@ -74,7 +75,7 @@ modifier inState(State _state) {
   
 
   // Functions
-  function addVoter(address _voterAddress) public onlyOwner() inState(State.Created) {
+  function addVoter(address _voterAddress) public onlyOwner inState(State.Created) {
         Voter memory v;
         v.voted = false;
         v.status = voterStatus.verified;
@@ -84,11 +85,11 @@ modifier inState(State _state) {
         // emit voterAdded(_voterAddress);
     }
     
-    function startVote() public onlyOwner() inState(State.Created) {
+    function startVote() public onlyOwner inState(State.Created) {
         state = State.Voting;
     }
     
-    function endVote() public onlyOwner() inState(State.Voting) {
+    function endVote() public onlyOwner inState(State.Voting) {
         state = State.Ended;
     }
 

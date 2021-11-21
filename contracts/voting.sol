@@ -2,11 +2,11 @@
 pragma solidity >=0.5.16 <0.9.0;
 pragma experimental ABIEncoderV2;
 
-// import "@openzeppelin/contracts/ownership/Ownable.sol";
-// import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
-// import "../installed_contracts/zeppelin/contracts/ownership/Ownable.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
 
+// import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+
+import "@openzeppelin/contracts/access/Ownable.sol"; // ownable functions installed
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract voting is Ownable {
   // State variables
@@ -49,11 +49,6 @@ modifier notOwner() {
   require(msg.sender != chairperson);
   _;
 }
-
-// modifier onlyOwner() {
-//   require(msg.sender == chairperson);
-//   _;
-// }
 
 modifier inState(State _state) {
     require(state == _state);

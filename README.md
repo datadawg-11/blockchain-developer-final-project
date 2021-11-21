@@ -19,7 +19,8 @@ In addition, users will be able to buy their selected items.
 - React front end javascript library for building web applications
 - OpenZeppelin Library
 
-### 
+### Ethereum Public Address
+0x520A2d4842312A49dA8E04FedFe81F3431Cd853f 
 
   
 ## User Workflow

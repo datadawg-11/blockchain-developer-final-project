@@ -1,5 +1,5 @@
 *.env
 *.log
-*truffle-config.js
+
 
 /installed_contracts

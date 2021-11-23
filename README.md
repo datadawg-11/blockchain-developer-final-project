@@ -12,10 +12,11 @@ In addition, users will be able to buy their selected items.
 ## Directory Structure
 - `contracts`: Smart contract deployed in Ropsten testnet
 - `migrations`: Migration files for deploying contracts in the `contracts` directory
+- `test`: Tests written for the smart contracts to ensure correct actions
 - 
 
 ## Front-end Project Location
-
+https://fancy-tooth-9776.on.fleek.co/
 
 
 

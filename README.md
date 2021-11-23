@@ -1,6 +1,6 @@
 # Blockchain-developer-bootcamp-final-project
 ---
-## Abstract - Project Explaination KISS
+## Project Description
 This project is submitted as part of the Blockchain Developer Bootcamp. The core objective is to demonstrate my understanding of the Ethereum Blockchain and interacting with the EVM through the use of smart contracts. 
 
 The idea is a simplified watered down version of a betting game. Idea is that there are two tiles where individuals can upload their favourite superhero images. Once the two characters have been input, a timer is set in place where outsiders can vote by waving. Whoever gets the most waves by the end of the round wins. 
@@ -8,6 +8,16 @@ The idea is a simplified watered down version of a betting game. Idea is that th
 In a fully built out idea, the voters also send in some money or the vote could cost like this amount of ETH. Whoever wins, gets the pot of the other side according to the number of votes they put in. 
 
 In addition, users will be able to buy their selected items. 
+
+## Directory Structure
+- `contracts`: Smart contract deployed in Ropsten testnet
+- `migrations`: Migration files for deploying contracts in the `contracts` directory
+- 
+
+## Front-end Project Location
+
+
+
 
 ## Tech Stack | Libraries | Frameworks
 - Solidity for Smart Contract 

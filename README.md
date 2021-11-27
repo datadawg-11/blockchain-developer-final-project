@@ -24,7 +24,7 @@ https://fancy-tooth-9776.on.fleek.co/
 - npm install @truffle/hdwallet-provider
 
 ### Contracts
-- Run local testnet in port `8545` with `ganache-cli --port 8545`
+- Run local testnet in port `8545` with `ganache-cli --port 8545` or `ganache-cli network development` which is pre-configured
 - Run `truffle migrate --network development`
 - Run `truffle console --network development`
 - Run truffle tests with `truffle test`
@@ -34,6 +34,7 @@ https://fancy-tooth-9776.on.fleek.co/
 ### Front End
 - Front end is using vanilla HTML and javascript  
 - Currently using WSL so open `http://172.29.12.39:5500/` otherwise i think it would be `http://localhost:3000`
+- In dapp.js file, change the constant `votingAddress` to the locally deployed address on the local testnet
 
 ## Tech Stack | Libraries | Frameworks
 - Solidity for Smart Contract 

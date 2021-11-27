@@ -36,21 +36,21 @@ contract("voting", function (accounts) {
     assert.equal(_totalRegisteredVoters,0,"total registered voters initially should be zero")
   })
 
-  it("voting should have the first proposal name as mason", async () => {
+  it("voting should have the first proposal name as 'purchase'", async () => {
       // get the contract that has been deployed
       const votingInstance = await voting.deployed(); 
 
       const _proposalOne = await votingInstance.proposals(0);
-      assert.equal(_proposalOne.name,"mason","Proposal one should be 'mason'")
+      assert.equal(_proposalOne.name,"purchase","Proposal one should be 'purchase'")
 
   })
 
-  it("voting should have the second proposal name as sarah", async () => {
+  it("voting should have the second proposal name as 'rent'", async () => {
     // get the contract that has been deployed
     const votingInstance = await voting.deployed(); 
 
     const _proposalOne = await votingInstance.proposals(1);
-    assert.equal(_proposalOne.name,"sarah","Proposal two should be 'sarah'")
+    assert.equal(_proposalOne.name,"rent","Proposal two should be 'rent'")
 
 })
 

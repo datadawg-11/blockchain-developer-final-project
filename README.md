@@ -3,11 +3,9 @@
 ## Project Description
 This project is submitted as part of the Blockchain Developer Bootcamp. The core objective is to demonstrate my understanding of the Ethereum Blockchain and interacting with the EVM through the use of smart contracts. 
 
-The idea is a simplified watered down version of a betting game. Idea is that there are two tiles where individuals can upload their favourite superhero images. Once the two characters have been input, a timer is set in place where outsiders can vote by waving. Whoever gets the most waves by the end of the round wins. 
+The idea is a simplified watered down version of a voting process. Contract will initally be deployed with predefined candidates (in this case, should people 'buy' or 'rent'). There is a centralised chairman that registers accounts to the voter register to allow certain accounts to participate. Once added, the chairman initates the voting round where accounts can vote. The chairman then closes the voting round and when this action is performed the winner is declared. 
 
 In a fully built out idea, the voters also send in some money or the vote could cost like this amount of ETH. Whoever wins, gets the pot of the other side according to the number of votes they put in. 
-
-In addition, users will be able to buy their selected items. 
 
 ## Directory Structure
 - `contracts`: Smart contract deployed in Ropsten testnet
@@ -19,6 +17,23 @@ In addition, users will be able to buy their selected items.
 https://fancy-tooth-9776.on.fleek.co/
 
 
+## How to run the project locally
+### Base dependencies
+- Node.js >=16
+- truffle v5.4.21 and ganache
+- npm install @truffle/hdwallet-provider
+
+### Contracts
+- Run local testnet in port `8545` with `ganache-cli --port 8545`
+- Run `truffle migrate --network development`
+- Run `truffle console --network development`
+- Run truffle tests with `truffle test`
+- The development network id is * but in metamask changet to network id 1337
+- 
+
+### Front End
+- Front end is using vanilla HTML and javascript  
+- Currently using WSL so open `http://172.29.12.39:5500/` otherwise i think it would be `http://localhost:3000`
 
 ## Tech Stack | Libraries | Frameworks
 - Solidity for Smart Contract 

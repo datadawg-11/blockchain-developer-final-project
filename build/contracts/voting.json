@@ -42,7 +42,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -55,7 +56,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -79,7 +81,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -99,7 +102,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -112,7 +116,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -125,7 +130,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -177,7 +183,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -235,7 +242,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -248,7 +256,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -261,7 +270,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -280,7 +290,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string[]\",\"name\":\"proposalNames\",\"type\":\"string[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_voterAddress\",\"type\":\"address\"}],\"name\":\"addVoter\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"chairperson\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"endVote\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTotalVotes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"proposals\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"voteCount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"startVote\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"state\",\"outputs\":[{\"internalType\":\"enum voting.State\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalVotersRegistered\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalVotes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"totalVotesFor\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_message\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"proposal\",\"type\":\"uint256\"}],\"name\":\"vote\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"voterRegister\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"vote\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"voted\",\"type\":\"bool\"},{\"internalType\":\"enum voting.voterStatus\",\"name\":\"status\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"winnerName\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"winnerName_\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"winningProposal\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"winningProposal_\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"addVoter(address)\":{\"params\":{\"_voterAddress\":\"The address of the voter\"}},\"endVote()\":{\"details\":\"there are three states for voting\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"startVote()\":{\"details\":\"there are three states for voting\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"},\"vote(string,uint256)\":{\"details\":\"there are three states for voting\",\"params\":{\"_message\":\"Message that the voter sends\",\"proposal\":\"This is the index of the candidates, either 0 or 1  \"}},\"winnerName()\":{\"details\":\"has a nested function which it calls to return the index\",\"returns\":{\"winnerName_\":\"this is the string of the winning proposal\"}},\"winningProposal()\":{\"details\":\"for loop initiated that iterates through each of the candidates vote count to determine the winner\",\"returns\":{\"winningProposal_\":\"this is the index of the winning proposal\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"addVoter(address)\":{\"notice\":\"Add a voted to the registry so they are able to vote in the voting stage\"},\"endVote()\":{\"notice\":\"Ends the voting round\"},\"getTotalVotes()\":{\"notice\":\"function to return the total votes received (getter function)\"},\"startVote()\":{\"notice\":\"Starts the voting round\"},\"totalVotesFor(uint256)\":{\"notice\":\"function to return the total votes for a particular candidate\"},\"vote(string,uint256)\":{\"notice\":\"the voting function that registered users will call\"},\"winnerName()\":{\"notice\":\"function to return the winning proposal string after voting has ended\"},\"winningProposal()\":{\"notice\":\"function to return the winning proposal after voting has ended\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/voting.sol\":\"voting\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x6bb804a310218875e89d12c053e94a13a4607cdf7cc2052f3e52bd32a0dc50a1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b2ebbbe6d0011175bd9e7268b83de3f9c2f9d8d4cbfbaef12aff977d7d727163\",\"dweb:/ipfs/Qmd5c7Vxtis9wzkDNhxwc6A2QT5H9xn9kfjhx7qx44vpro\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x90565a39ae45c80f0468dc96c7b20d0afc3055f344c8203a0c9258239f350b9f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://26e8b38a7ac8e7b4463af00cf7fff1bf48ae9875765bf4f7751e100124d0bc8c\",\"dweb:/ipfs/QmWcsmkVr24xmmjfnBQZoemFniXjj3vwT78Cz6uqZW1Hux\"]},\"project:/contracts/voting.sol\":{\"keccak256\":\"0xa0d982030df51b3b5ec4aaf47cb6843da5fd330437feae3b335f1563204fc6c2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2d1676c196e7ae5016e9d27d8493c0c86f9c63285a94a8657132d453a24631c7\",\"dweb:/ipfs/QmQUAz9fwpjjHxAtXZ3WBsMsmvqp7SHSX2TzfvF6G5JpG6\"]}},\"version\":1}",
@@ -18441,10 +18452,29 @@
       "links": {},
       "address": "0x4c6A9DD8860198270DD5Fb243C7c7C827f8ABdf2",
       "transactionHash": "0x0874308f9edbe3208ad55aebc6f82eec909a5968c030d47d9bfc5bd0c82863b3"
+    },
+    "1638104870937": {
+      "events": {},
+      "links": {},
+      "address": "0xdc9752E1DAAe5F4C9951F4F3Ac7CEE5870D175eA",
+      "transactionHash": "0x7733d916d87b3b43ae1ae8b02f3d4adf0ad11250d6d5229b35ac7818742d1c24"
+    },
+    "1638105713426": {
+      "events": {},
+      "links": {},
+      "address": "0x69F71AE510dC65a8392EF331e6c4ce8E37234aB6",
+      "transactionHash": "0x2ef729d26c003406e7841cd9db6a1bb7ffe2a3a62f09ec0b19bb5b772ee47459"
+    },
+    "1638106286668": {
+      "events": {},
+      "links": {},
+      "address": "0x02Ccc7f7b8662D3526048Ea9bf7582820d736659",
+      "transactionHash": "0x59a21e5f9362ec1db011867eacbeb0a38dac1074755aa5a0a1cc3c6f19db7df3"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-11-27T12:39:26.851Z",
+  "updatedAt": "2021-11-28T13:32:32.039Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {

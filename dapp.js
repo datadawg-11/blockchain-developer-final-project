@@ -1,7 +1,7 @@
 // const { send } = require("process")
 
 // Contract deployed on the local blockchain
-const votingAddress = '0x4c6A9DD8860198270DD5Fb243C7c7C827f8ABdf2'
+const votingAddress = '0x02Ccc7f7b8662D3526048Ea9bf7582820d736659'
 
 const votingABI = [
 	{
@@ -339,7 +339,7 @@ getVoterButton.onclick =  async () => {
 	totalVoterText.innerText = `Total Voters : ${registered}`
 }
 
-// Setup the function to obtain the registry of the voter
+// Setup the function to obtain the registry of the voter, yet to be created
 
 
 

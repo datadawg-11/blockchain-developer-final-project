@@ -8,13 +8,13 @@ The idea is a simplified watered down version of a voting process. Contract will
 In a fully built out idea, the voters also send in some money or the vote could cost like this amount of ETH. Whoever wins, gets the pot of the other side according to the number of votes they put in. 
 
 ## Directory Structure
-- `contracts`: Smart contract deployed in Ropsten testnet
+- `contracts`: Smart contract deployed to Ropsten testnet
 - `migrations`: Migration files for deploying contracts in the `contracts` directory
 - `test`: Tests written for the smart contracts to ensure correct actions
 - `index.html`: The vanilla HTML file for the frontend
 - `dapp.js`: The vanilla javascript for the frontend and connection with the deployed smart contract
 
-## Front-end Project Location
+## Front-end Project Location (Deployed with fleek)
 odd-cloud-5728.on.fleek.co
 
 
@@ -51,17 +51,13 @@ odd-cloud-5728.on.fleek.co
 0x520A2d4842312A49dA8E04FedFe81F3431Cd853f 
 
   
-## How to setup 
-1. Initially the website will have two categories to vote for, i.e whether to 'purchase' or to 'rent'.  timer should be set off initially for a set period. 
+## Walkthrough of user interactions
+1. Initially the website will have two categories to vote for, i.e whether to 'purchase' or to 'rent'.
 2. The Chairperson is the owner of the smart contract and the deployer of the contract. The chairperson is the first account address and is only allowed to add people to the voter registry to allow other users to vote. In addition, the chairperson is the only account allowed to change the state of the voting i.e registration, voting, ending
 3. Once all voters are registered, the chairperson starts the voting round. 
-4. User accounts can now submit their vote
-5. Once all votes are cast, the chairperson closes the voting round by ending vote. 
+4. User accounts can now submit their votes
+5. Once all votes are cast, the chairperson closes the voting round by ending the voting round state. 
 6. Once chairperson has closed the network the winner is displayed
-
-## The Bigger Picture
-. 
-
 
 ## Credits and Inspiration from
 https://medium.com/coinmonks/voting-on-a-blockchain-solidity-contract-codes-explained-c677996d94f2
@@ -73,4 +69,3 @@ https://medium.com/coinmonks/voting-on-a-blockchain-solidity-contract-codes-expl
 https://stackoverflow.com/questions/68691636/ethereum-lottery-smart-contract-with-the-following-conditions
 
 
-Use Lume for screen recording

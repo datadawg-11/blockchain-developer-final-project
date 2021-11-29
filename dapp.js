@@ -1,7 +1,7 @@
 // const { send } = require("process")
 
-// Contract deployed on the local blockchain
-const votingAddress = '0x02Ccc7f7b8662D3526048Ea9bf7582820d736659'
+// Contract deployed on the ropsten testnet. Change below if working on local net
+const votingAddress = '0x25Cc8D3ba761CFCa8cF134174A4BBad1c3C6d634' 
 
 const votingABI = [
 	{

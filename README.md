@@ -15,7 +15,7 @@ In a fully built out idea, the voters also send in some money or the vote could 
 - `dapp.js`: The vanilla javascript for the frontend and connection with the deployed smart contract
 
 ## Front-end Project Location
-https://fancy-tooth-9776.on.fleek.co/
+odd-cloud-5728.on.fleek.co
 
 
 ## How to run the project locally
